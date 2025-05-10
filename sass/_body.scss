@@ -1,0 +1,65 @@
+/* Базовые настройки для сайта и body */
+
+/* Установка определения блока - по границе */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Обнуление отступов для заголовков, абзацев и ссылок */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: $color-accent;
+    /* Убрать подчеркивание для ссылок */
+    // text-decoration: none;
+}
+
+body {
+
+    /* Пример использования шаблона */
+    /* Шаблон для немаркированного списка */
+    @extend %list;
+
+    /* Обнуление внешних отступов для тела сайта */
+    margin: 0px;
+
+    // Внутренние отступы для body
+    /* Всерху - Отступ для фиксированного меню. */
+    /* Правильное значение будет задано через <script> в index.html  */
+    padding: 50px 0px 0px 0px;
+    
+
+    // Цвет фона сайта
+    /* Получение цвета из SACC-переменной*/ 
+    background-color: $color-bg-main;
+
+    // Основной цвет для текста и элементов
+    color: $color-black;
+
+    /* Вариант - Получение цветов из карты через функцию */
+    // background-color: getColor('main-white');
+    // color-scheme: getColor('main-text');
+
+    /* Основной шрифт */
+    font-family: "Inter",  sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+
+}
+
+
+
+
+

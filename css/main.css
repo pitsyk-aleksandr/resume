@@ -1,0 +1,656 @@
+@charset "UTF-8";
+/* Переменные */
+/* Переменные */
+/* Переменные точек перелома адаптивной верстки*/
+/*================================================*/
+/* Палитра основных цветов */
+/*========================================*/
+/* ПЕРЕМЕННЫЕ - в виде SACC-переменных */
+/*========================================*/
+/* ПЕРЕМЕННЫЕ - в виде CSS-переменных */
+/* :root - специфичный аналог селектора <html> в CSS*/
+/* CSS-переменные (кастомные свойства) */
+/* =============================================================*/
+/* ПЕРЕМЕННЫЕ - в виде КАРТЫ */
+/* Функция получения цвета из карты */
+/* Шрифты */
+/* Шрифты */
+/*  <weight>: Use a value from 100 to 900                 */
+/* <uniquifier>: Use a unique and descriptive class name  */
+.text-title-main {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.text-title-section {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.text-big {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.text-medium {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.text-small {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+}
+
+.text-btn {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+}
+
+/* Утилиты - Шаблоны */
+/* Утилиты - ШАБЛОНЫ - placeholder */
+/* Шаблон для немаркированного списка */
+.list, .page-header .lang-menu, body {
+  /* Сбросить все отступы по умолчанию */
+  padding: 0;
+  margin: 0;
+  /* Убрать первые точечки в неупорядоченном списке */
+  list-style: none;
+}
+
+/* Шаблон, который ограничивает контент размером сетки и устанавливает отступы */
+.main-content, header {
+  /* Внутренние отступы для блока */
+  padding-top: 0px;
+  padding-right: 12px;
+  padding-bottom: 12px;
+  padding-left: 12px;
+  /* Выравнивание блока по центру */
+  margin-left: auto;
+  margin-right: auto;
+  /*===============================================*/
+  /* Установка для мобильной версии */
+  /* по максимальной ширине мобильного устройства*/
+  max-width: 480px;
+  width: 100%;
+  /*===============================================*/
+  /*===============================================*/
+  /* Установка для промежутка между мобильной версией и планшетом */
+  /*===============================================*/
+  /* Установка для размера - больше планшета */
+}
+@media screen and (min-width: 480px) {
+  .main-content, header {
+    width: 480px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .main-content, header {
+    max-width: none;
+    width: 100%;
+  }
+}
+
+/* Блок с уровнями знаний - levels */
+/* Блок с уровнями знаний - levels */
+/* Стили для одного уровня - кружочка*/
+.level {
+  width: 12px;
+  height: 12px;
+  border-radius: 6px;
+  border-style: solid;
+  border-color: #0D0D0D;
+  border-width: 1px;
+  background-color: #8FDCDE;
+}
+
+/* Стили для блока уровней - кружочков */
+.levels {
+  /* Блок делаем флексом */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /* Установка всех элементов в строку */
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  /* Расстояние между элементами */
+  gap: 8px;
+  /* Вид группы уровней для навыка с уровнем знаний 1 */
+  /* Вид группы уровней для навыка с уровнем знаний 2 */
+  /* Вид группы уровней для навыка с уровнем знаний 3 */
+  /* Вид группы уровней для навыка с уровнем знаний 4 */
+  /* Вид группы уровней для навыка с уровнем знаний 5 */
+}
+.levels.level-1 .level.one {
+  background-color: #24156E;
+}
+.levels.level-2 .level.one {
+  background-color: #24156E;
+}
+.levels.level-2 .level.two {
+  background-color: #24156E;
+}
+.levels.level-3 .level.one {
+  background-color: #24156E;
+}
+.levels.level-3 .level.two {
+  background-color: #24156E;
+}
+.levels.level-3 .level.three {
+  background-color: #24156E;
+}
+.levels.level-4 .level.one {
+  background-color: #24156E;
+}
+.levels.level-4 .level.two {
+  background-color: #24156E;
+}
+.levels.level-4 .level.three {
+  background-color: #24156E;
+}
+.levels.level-4 .level.four {
+  background-color: #24156E;
+}
+.levels.level-5 .level.one {
+  background-color: #24156E;
+}
+.levels.level-5 .level.two {
+  background-color: #24156E;
+}
+.levels.level-5 .level.three {
+  background-color: #24156E;
+}
+.levels.level-5 .level.four {
+  background-color: #24156E;
+}
+.levels.level-5 .level.five {
+  background-color: #24156E;
+}
+
+/* Базовые настройки для сайта и body */
+/* Базовые настройки для сайта и body */
+/* Установка определения блока - по границе */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* Обнуление отступов для заголовков, абзацев и ссылок */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: #24156E;
+  /* Убрать подчеркивание для ссылок */
+}
+
+body {
+  /* Пример использования шаблона */
+  /* Шаблон для немаркированного списка */
+  /* Обнуление внешних отступов для тела сайта */
+  margin: 0px;
+  /* Всерху - Отступ для фиксированного меню. */
+  /* Правильное значение будет задано через <script> в index.html  */
+  padding: 50px 0px 0px 0px;
+  /* Получение цвета из SACC-переменной*/
+  background-color: #FEEFD6;
+  color: #0D0D0D;
+  /* Вариант - Получение цветов из карты через функцию */
+  /* Основной шрифт */
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+/* Компоненты */
+header {
+  /* Шаблон, который ограничивает контент размером сетки и устанавливает отступы */
+}
+
+/* Верхняя строка - header */
+.page-header {
+  padding: 8px 12px 8px 12px;
+  /* Ширина блока - 100% ширины container */
+  width: 100%;
+  /* Фиксированная верхняя строка меню */
+  position: fixed;
+  /* Абсолютное позиционирование Верх и слева*/
+  top: 0;
+  left: 0;
+  /* page-header ставится поверх ВСЕХ слоев */
+  z-index: 999;
+  /* Цвет фона*/
+  background-color: #FEEFD6;
+  /* Минимальная высота */
+  /* Нижняя граница элемента */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /* Установка всех элементов в строку */
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  /* Выравнивание всех элементов контейнера по второстепенной оси - по центру */
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /* Выравнивание контента - по расстоянию между ними*/
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  /* Расстояние между элементами */
+  gap: 12px;
+  /* Для мобильного версии */
+  /* Меню кнопок выбора языка*/
+  /* Для мобильного версии */
+}
+.page-header .title-main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /* Установка всех элементов в столбец c реверсом */
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+  /* Выравнивание всех элементов контейнера по второстепенной оси - по центру */
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /* Расстояние между элементами */
+  gap: 12px;
+  /* Увеличение размеров блока по сравнению с меню языков*/
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  /* Выравнивание контента - по расстоянию между ними */
+  /*===============================================*/
+  /* Установка для промежутка между мобильной версией и планшетом */
+  /*===============================================*/
+  /* Установка для размера - больше планшета */
+}
+@media screen and (min-width: 768px) {
+  .page-header .title-main {
+    /* Установка всех элементов в строку */
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+.page-header .lang-menu {
+  /*------------------------------------------------------------*/
+  /* Шаблон, который определяет "нулевые" установки для ненумерованного списка */
+  padding-top: 4px;
+  padding-right: 4px;
+  padding-bottom: 4px;
+  padding-left: 4px;
+  /* Ширина блока установлена по размеру контента */
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /* Расстояние между кнопками */
+  gap: 4px;
+  /* Выравнивание по второстепенной оси */
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /*------------------------------------------------------------*/
+  /* Установка всех элементов в столбец  */
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  /*===============================================*/
+  /* Установка для промежутка между мобильной версией и планшетом */
+  /*===============================================*/
+  /* Установка для размера - больше планшета */
+}
+@media screen and (min-width: 768px) {
+  .page-header .lang-menu {
+    /* Установка всех элементов в строку */
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+.lang-btn {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  border-radius: 8px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #FEEFD6;
+  cursor: pointer;
+  padding: 5px;
+  color: #0D0D0D;
+  background-color: #8FDCDE;
+  /* Текущий язык сайта*/
+}
+.lang-btn.current {
+  border-color: #0D0D0D;
+  color: #FBFBFB;
+  background-color: #24156E;
+  font-weight: 700;
+}
+.lang-btn:hover, .lang-btn:focus {
+  border-color: #0D0D0D;
+}
+
+/* Стили для секции*/
+.main-content {
+  /* Шаблон, который ограничивает контент размером сетки и устанавливает отступы */
+  /* Блок делаем флексом */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /* Установка всех элементов в столбец */
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  /* Расстояние между колонками */
+  gap: 12px;
+  /* Выравнивание всех элементов контейнера по второстепенной оси - по центру */
+  /* Выравнивание контента - по расстоянию между ними*/
+  /*===============================================*/
+  /* Установка для промежутка между мобильной версией и планшетом */
+  /*===============================================*/
+  /* Установка для размера - больше планшета */
+}
+@media screen and (min-width: 768px) {
+  .main-content {
+    /* Установка всех элементов в строку */
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+.side-left {
+  /* Ширина блока */
+  width: 100%;
+  /* Блок делаем флексом */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /* Установка всех элементов в столбец */
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  /* Расстояние между блоками */
+  gap: 12px;
+  /*===============================================*/
+  /* Установка для промежутка между мобильной версией и планшетом */
+  /*===============================================*/
+  /* Установка для размера - больше планшета */
+}
+@media screen and (min-width: 768px) {
+  .side-left {
+    /* Ширина блока */
+    max-width: 400px;
+  }
+}
+
+.side-right {
+  /* Ширина блока */
+  width: 100%;
+  /* Блок делаем флексом */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /* Установка всех элементов в столбец */
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  /* Расстояние между блоками */
+  gap: 12px;
+}
+
+/* Секция = Заголовок + Список */
+.section {
+  padding-top: 8px;
+  padding-right: 0px;
+  padding-bottom: 8px;
+  padding-left: 0px;
+  border-radius: 12px;
+  border-style: solid;
+  border-color: #8FDCDE;
+  border-width: 1px;
+  background-color: #D2E1D8;
+  /* Ширина блока */
+  width: 100%;
+  /* Блок делаем флексом */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /* Установка всех элементов в столбец */
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  /* Расстояние между блоками */
+  gap: 8px;
+  /* Выравнивание контента - по расстоянию между ними*/
+  /* Выравнивание всех элементов контейнера по второстепенной оси - по центру */
+}
+.section .photo {
+  padding-top: 0;
+  padding-bottom: 0;
+  display: block;
+  /* Ширина блока */
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+.section.adds-info {
+  /* В мобильной версии невидим блок - Дополнительная информация */
+  display: none;
+  /*===============================================*/
+  /* Установка для промежутка между мобильной версией и планшетом */
+  /*===============================================*/
+  /* Установка для размера - больше планшета */
+}
+@media screen and (min-width: 768px) {
+  .section.adds-info {
+    /* Видимость блока - Дополнительная информация */
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+  }
+}
+
+/* Заголовок секции */
+.text-title-section,
+.text-title-main {
+  text-align: center;
+}
+
+/* Список внутри секции - ul */
+.list {
+  /* Шаблон, который определяет "нулевые" установки для ненумерованного списка */
+  /* Блок делаем флексом */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /* Установка всех элементов в столбец */
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  /* Расстояние между блоками */
+  gap: 8px;
+  /* Выравнивание контента - по расстоянию между ними*/
+  /* Выравнивание всех элементов контейнера по второстепенной оси - по центру */
+}
+
+/* Блоки списка */
+.item {
+  /* Для абсолютного позиционирования кнопки - Подробнее..*/
+  position: relative;
+  width: 100%;
+  padding-top: 4px;
+  padding-right: 24px;
+  padding-bottom: 4px;
+  padding-left: 24px;
+  background-color: #8FDCDE;
+  border: none;
+  border-radius: 8px;
+  /* Ширина блока */
+  width: 100%;
+  /* Блок делаем флексом */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /* Установка всех элементов в строку */
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  /* Расстояние между блоками */
+  /* Выравнивание контента */
+  /* Для блоков с оценками - по расстоянию между ними */
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  /* Выравнивание всех элементов контейнера по второстепенной оси - по центру */
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contacts .item {
+  /* Расстояние между блоками */
+  gap: 24px;
+  /* Выравнивание контента */
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+}
+
+.icon {
+  display: inline-block;
+  margin: 0;
+}
+
+.education .item,
+.works .item,
+.projects .item {
+  /* Установка всех элементов в столбец */
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  /* Расстояние между блоками */
+  gap: 4px;
+  /* Выравнивание контента */
+  /* Для блоков с оценками - по расстоянию между ними */
+  /* Выравнивание всех элементов контейнера по второстепенной оси - по центру */
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+}
+
+/* Секция Образование-Опыт работы*/
+/* Строка Предприятие-Город*/
+.firm-town {
+  /* Блок делаем флексом */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /* Установка всех элементов в столбец */
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  /* Расстояние между элементами */
+  gap: 4px;
+  /* Выравнивание всех элементов контейнера по второстепенной оси - по центру */
+  /* Выравнивание контента - по левой стороне*/
+  /*===============================================*/
+  /* Установка для промежутка между мобильной версией и планшетом */
+  /*===============================================*/
+  /* Установка для размера - больше планшета */
+}
+@media screen and (min-width: 768px) {
+  .firm-town {
+    /* Установка всех элементов в строку */
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    /* Расстояние между элементами */
+    gap: 12px;
+    /* Выравнивание всех элементов контейнера по второстепенной оси - по базовой линии текста */
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+  }
+}
+
+.btn-details {
+  /* Блок абсолютного позиционирования кнопки */
+  /*===========================================*/
+  padding: 4px 16px;
+  border-radius: 8px;
+  border-style: solid;
+  border-color: #0D0D0D;
+  border-width: 1px;
+  min-width: 200px;
+  color: #0D0D0D;
+  background-color: #FEEFD6;
+  -webkit-box-shadow: 2px 2px 2px 2px rgba(0, 0, 255, 0.2);
+          box-shadow: 2px 2px 2px 2px rgba(0, 0, 255, 0.2);
+  cursor: pointer;
+}
+.btn-details:hover, .btn-details:focus {
+  background-color: #D2E1D8;
+}
+.btn-details.show {
+  color: #FBFBFB;
+  background-color: #24156E;
+  -webkit-box-shadow: 1px 1px 1px 1px rgba(0, 0, 255, 0.2);
+          box-shadow: 1px 1px 1px 1px rgba(0, 0, 255, 0.2);
+}
+
+.details {
+  display: none;
+}
+.details.show {
+  display: block;
+}/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,91 @@
+/* Блок с уровнями знаний - levels */
+
+/* Стили для одного уровня - кружочка*/
+.level {
+    width: 12px;
+    height: 12px;
+    border-radius: 6px;
+    border-style: solid;
+    border-color: $color-black;
+    border-width: 1px;
+    background-color: $color-bg-part;
+}
+
+/* Стили для блока уровней - кружочков */
+.levels {
+    /* Блок делаем флексом */
+    display: flex;
+    /* Установка всех элементов в строку */
+    flex-direction: row;
+    /* Расстояние между элементами */
+    gap: 8px;
+
+    /* Вид группы уровней для навыка с уровнем знаний 1 */
+    &.level-1 {
+        & .level.one {
+            background-color: $color-accent;
+        }
+    }
+
+    /* Вид группы уровней для навыка с уровнем знаний 2 */
+    &.level-2 {
+        & .level.one {
+            background-color: $color-accent;
+        }
+        & .level.two {
+            background-color: $color-accent;
+        }
+    }
+
+    /* Вид группы уровней для навыка с уровнем знаний 3 */
+    &.level-3 {
+        & .level.one {
+            background-color: $color-accent;
+        }
+        & .level.two {
+            background-color: $color-accent;
+        }
+        & .level.three {
+            background-color: $color-accent;
+        }
+    }
+
+    /* Вид группы уровней для навыка с уровнем знаний 4 */
+    &.level-4 {
+        & .level.one {
+            background-color: $color-accent;
+        }   
+        & .level.two {
+            background-color: $color-accent;
+        }   
+        & .level.three {
+            background-color: $color-accent;
+        }
+        & .level.four {
+            background-color: $color-accent;
+        }
+    }
+
+    /* Вид группы уровней для навыка с уровнем знаний 5 */
+    &.level-5 {
+        & .level.one {
+             background-color: $color-accent;
+        }   
+        & .level.two {
+            background-color: $color-accent;
+        }   
+        & .level.three {
+            background-color: $color-accent;
+        }    
+        & .level.four {
+            background-color: $color-accent;
+        }
+        & .level.five {
+            background-color: $color-accent;
+        }
+    }
+}
+
+
+
+

@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <!-- Главный язык документа -->
+  <head>
+    <!-- Кодировку страницы необходимо указать для того, чтобы браузер корректно отобразил текст -->
+    <meta charset="UTF-8" />
+
+    <!-- Краткое описание содержания помогает поисковым системам лучше проиндексировать страницу -->
+    <meta name="description" content="Резюме Пицык Александр Full-Stack Developer" />
+
+    <!-- Размер окна браузера -->
+    <!-- Ширина - ширина девайса (width=device-width)-->
+    <!-- Масштаб просмотра 1:1 (initial-scale=1.0) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Заголовок страницы, который отображается во вкладке браузера -->
+    <!-- Текст заголовка содержит краткое описание содержимого веб-страницы -->
+    <!-- Длина заголовка должна быть не более 60 символов, чтобы полностью поместиться в заголовке -->
+    <title>Резюме</title>
+
+    <!-- Иконка моего резюме -->
+    <!-- Для того чтобы добавить иконку сайта на вкладке, нужно использовать тег <link> 
+    со значением атрибута rel равным "shortcut icon" и атрибут href указывающий на путь к изображению -->
+    <link rel="shortcut icon" href="./icon/profile.svg" />
+
+    <!-- Подключение  шрифтов -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- подключается нормализатор стилей для всех браузеров - перед подключением остальных стилей -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
+    />
+
+    <!-- Подключение внешнего файла со стилями -->
+    <!-- <link rel="stylesheet" href="./css/resume.css" /> -->
+    <link rel="stylesheet" href="./css/main.min.css" />
+  </head>
+  <body>
+    <!-- Заголовок -->
+    <header>
+      <div class="page-header">
+        <div class="title-main">
+          <!-- Секция Фамилия и Имя -->
+          <section class="section my-name">
+            <h2 id="my-name" class="text-title-main">Пицык Александр</h2>
+          </section>
+
+          <!-- Секция Моя Возможная должность -->
+          <section class="section my-position">
+            <h1 id="my-position" class="text-title-main">Full-Stack Developer</h1>
+          </section>
+        </div>
+
+        <ul class="section lang-menu">
+          <li class="lang-item">
+            <button type="button" data-lang="ua" class="lang-btn text-btn">UA</button>
+          </li>
+          <li class="lang-item">
+            <button type="button" data-lang="en" class="lang-btn text-btn">EN</button>
+          </li>
+          <li class="lang-item">
+            <button type="button" data-lang="ru" class="lang-btn text-btn current">RU</button>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <main>
+      <!-- Контейнер всего основного контента -->
+      <div class="main-content">
+        <!-- Левая сторона сайта -->
+        <div class="side-left">
+          <!-- Фотография -->
+          <section class="section photo">
+            <img src="./image/my-photo.jpg" alt="Фотография" class="photo" />
+          </section>
+
+          <!-- Секция КОНТАКТЫ -->
+          <section class="section contacts">
+            <h3 id="contacts-title" class="text-title-section">Контакты</h3>
+            <ul class="list">
+              <li class="item">
+                <svg width="20" height="20" class="email icon">
+                  <use href="./icon/icons.svg#icon-envelop"></use>
+                </svg>
+                <p class="email text-big">pitsyk.a@gmail.com</p>
+                <!-- <a href="mailto:pitsyk.a@gmail.com" title="Напиши" class="email text-big"
+                  >pitsyk.a@gmail.com</a
+                > -->
+              </li>
+              <li class="item">
+                <svg width="20" height="20" class="phone icon">
+                  <use href="./icon/icons.svg#icon-phone"></use>
+                </svg>
+                <p class="phone text-big">+38 067 635 17 28</p>
+                <!-- <a href="tel:+380676351728" title="Позвони" class="phone text-big"
+                  >+38 067-635-17-28</a
+                > -->
+              </li>
+            </ul>
+          </section>
+
+          <!-- Секция ТЕХНИЧЕСКИЕ НАВЫКИ -->
+          <section class="section tech-skills">
+            <h3 id="tech-title" class="text-title-section">Технические навыки</h3>
+            <ul class="list">
+              <li class="item">
+                <p class="text-big">Microsoft Word</p>
+                <!-- Блок с уровнем знаний. Уровень навыка определяется дополнительным классом class="level-4" -->
+                <div class="levels level-4">
+                  <div class="level one"></div>
+                  <div class="level two"></div>
+                  <div class="level three"></div>
+                  <div class="level four"></div>
+                  <div class="level five"></div>
+                </div>
+              </li>
+              <li class="item">
+                <p class="text-big">Microsoft Excel</p>
+                <div class="levels level-4">
+                  <div class="level one"></div>
+                  <div class="level two"></div>
+                  <div class="level three"></div>
+                  <div class="level four"></div>
+                  <div class="level five"></div>
+                </div>
+              </li>
+              <li class="item">
+                <p class="text-big">Figma</p>
+                <div class="levels level-3">
+                  <div class="level one"></div>
+                  <div class="level two"></div>
+                  <div class="level three"></div>
+                  <div class="level four"></div>
+                  <div class="level five"></div>
+                </div>
+              </li>
+              <li class="item">
+                <p class="text-big">HTML</p>
+                <div class="levels level-3">
+                  <div class="level one"></div>
+                  <div class="level two"></div>
+                  <div class="level three"></div>
+                  <div class="level four"></div>
+                  <div class="level five"></div>
+                </div>
+              </li>
+              <li class="item">
+                <p class="text-big">CSS</p>
+                <div class="levels level-3">
+                  <div class="level one"></div>
+                  <div class="level two"></div>
+                  <div class="level three"></div>
+                  <div class="level four"></div>
+                  <div class="level five"></div>
+                </div>
+              </li>
+              <li class="item">
+                <p class="text-big">MySQL</p>
+                <div class="levels level-2">
+                  <div class="level one"></div>
+                  <div class="level two"></div>
+                  <div class="level three"></div>
+                  <div class="level four"></div>
+                  <div class="level five"></div>
+                </div>
+              </li>
+              <li class="item">
+                <p class="text-big">GitHub</p>
+                <div class="levels level-2">
+                  <div class="level one"></div>
+                  <div class="level two"></div>
+                  <div class="level three"></div>
+                  <div class="level four"></div>
+                  <div class="level five"></div>
+                </div>
+              </li>
+              <li class="item">
+                <p class="text-big">Golang</p>
+                <div class="levels level-2">
+                  <div class="level one"></div>
+                  <div class="level two"></div>
+                  <div class="level three"></div>
+                  <div class="level four"></div>
+                  <div class="level five"></div>
+                </div>
+              </li>
+            </ul>
+          </section>
+
+          <!-- Секция ЛИЧНЫЕ КАЧЕСТВА -->
+          <section class="section soft-skills">
+            <h3 id="soft-title" class="text-title-section">Личные качества</h3>
+            <ul class="list">
+              <li class="item">
+                <p id="soft-1" class="text-big">Системное мышление</p>
+              </li>
+              <li class="item">
+                <p id="soft-2" class="text-big">Эмоциональный интеллект</p>
+              </li>
+              <li class="item">
+                <p id="soft-3" class="text-big">Адаптивность и гибкость</p>
+              </li>
+              <li class="item">
+                <p id="soft-4" class="text-big">Стрессоустойчивость</p>
+              </li>
+              <li class="item">
+                <p id="soft-5" class="text-big">Позитивность и оптимизм</p>
+              </li>
+              <li class="item">
+                <p id="soft-6" class="text-big">Коммуникабельность</p>
+              </li>
+            </ul>
+          </section>
+
+          <!-- Секция ЗНАНИЕ ЯЗЫКОВ -->
+          <section class="section lang-skills">
+            <h3 id="lang-title" class="text-title-section">Знание языков</h3>
+            <ul class="list">
+              <li class="item">
+                <p id="lang-1" class="text-big">Украинский</p>
+                <div class="levels level-5">
+                  <div class="level one"></div>
+                  <div class="level two"></div>
+                  <div class="level three"></div>
+                  <div class="level four"></div>
+                  <div class="level five"></div>
+                </div>
+              </li>
+              <li class="item">
+                <p id="lang-2" class="text-big">Английский</p>
+                <div class="levels level-3">
+                  <div class="level one"></div>
+                  <div class="level two"></div>
+                  <div class="level three"></div>
+                  <div class="level four"></div>
+                  <div class="level five"></div>
+                </div>
+              </li>
+              <li class="item">
+                <p id="lang-3" class="text-big">Русский</p>
+                <div class="levels level-5">
+                  <div class="level one"></div>
+                  <div class="level two"></div>
+                  <div class="level three"></div>
+                  <div class="level four"></div>
+                  <div class="level five"></div>
+                </div>
+              </li>
+            </ul>
+          </section>
+
+          <!-- Секция ПРОЕКТЫ -->
+          <section class="section projects">
+            <h3 id="projects-title" class="text-title-section">Проекты - примеры</h3>
+            <ul class="list">
+              <li class="item">
+                <p id="project-1" class="text-small">Резюме - Figma</p>
+                <a
+                  href="https://www.figma.com/design/tIg0O0TskDivlzifTRJWrC/Resume?node-id=33-3&m=dev&t=jxvGN6VCn17YcarV-1"
+                  target="_blank"
+                  class="link text-small"
+                  >https://www.figma.com/design/...</a
+                >
+              </li>
+              <li class="item">
+                <p id="project-2" class="text-small">Резюме - HTML + CSS + JavaScript</p>
+                <a href="" target="_blank" class="link text-small">ссылка на проект</a>
+              </li>
+            </ul>
+          </section>
+
+          <!-- Секция Дополнительная информация -->
+          <section class="section adds-info">
+            <h3 id="adds-title" class="text-title-section">Дополнительная информация</h3>
+            <ul class="list">
+              <li class="item">
+                <p id="add-1" class="text-small">Готовность к командировкам</p>
+              </li>
+              <li class="item">
+                <p id="add-2" class="text-small">Водитель с правами категории “B”</p>
+              </li>
+            </ul>
+          </section>
+        </div>
+
+        <!-- Правая сторона сайта -->
+        <div class="side-right">
+          <!-- Секция ПРЕДСТАВЛЕНИЕ - коротко обо мне -->
+          <section class="section introduce">
+            <h3 id="intro-title" class="text-title-section">Обо мне</h3>
+            <p id="intro-text" class="item text-small">
+              В молодости очень активно занимался программированием. <br />
+              Был участником студенческих республиканских олимпиад по программированию. <br />
+              В 90-е годы работал инженером-программистом. <br />
+              В настоящее время есть время, вдохновение и желание вернуться к любимому делу. <br />
+              С удовольствием изучаю и окунаюсь в сферу современного IT. <br />
+              Подключусь к выполнению реальных проектов, как индивидуально, так и в состав
+              существующей команды. <br />
+              Ищу дистанционную работу, позволяющую оптимизировать личный тайминг.
+            </p>
+          </section>
+
+          <!-- Секция ОБРАЗОВАНИЕ -->
+          <section class="section education">
+            <h3 id="edu-title" class="text-title-section">Образование</h3>
+            <ul class="list">
+              <li class="item">
+                <p id="edu-1-position" class="text-big">Инженер-металлург</p>
+                <div class="firm-town">
+                  <p id="edu-1-firm" class="text-medium">ДИИ - Индустриальный институт</p>
+                  <p id="edu-1-town" class="text-small">г.Каменское</p>
+                </div>
+                <p id="edu-1-period" class="text-small">Сентябрь 1984 - Июнь 1991</p>
+              </li>
+              <li class="item">
+                <p id="edu-2-position" class="text-big">Бухгалтер</p>
+                <div class="firm-town">
+                  <p id="edu-2-firm" class="text-medium">ДИИ - Индустриальный институт</p>
+                  <p id="edu-2-town" class="text-small">г.Каменское</p>
+                </div>
+                <p id="edu-2-period" class="text-small">Октябрь 1994 - Декабрь 1994</p>
+              </li>
+            </ul>
+          </section>
+
+          <!-- Секция ОПЫТ РАБОТЫ -->
+          <section class="section works">
+            <h3 id="works-title" class="text-title-section">Опыт работы</h3>
+            <ul class="list">
+              <li class="item">
+                <p id="work-1-position" class="text-big">
+                  Заместитель директора по качеству и контролю
+                </p>
+                <div class="firm-town">
+                  <p id="work-1-firm" class="text-medium">ООО «ДДАП-РАКС»</p>
+                  <p id="work-1-town" class="text-small">г.Каменское</p>
+                </div>
+                <p id="work-1-period" class="text-small">Февраль 2009 - Ноябрь 2023</p>
+                <button type="button" data-work="1" class="btn-details text-btn">
+                  Подробнее...
+                </button>
+                <div class="details">
+                  <h4>Обязанности:</h4>
+                  <p></p>
+                  <h4>Достижения:</h4>
+                  <p></p>
+                </div>
+              </li>
+
+              <li class="item">
+                <p id="work-2-position" class="text-big">Заместитель директора по развитию</p>
+                <div class="firm-town">
+                  <p id="work-2-firm" class="text-medium">ООО «ДДАП-РАКС»</p>
+                  <p id="work-2-town" class="text-small">г.Каменское</p>
+                </div>
+                <p id="work-2-period" class="text-small">Май 2007 - Февраль 2009</p>
+                <button type="button" hidden data-work="2" class="btn-details text-btn">
+                  Подробнее...
+                </button>
+                <div class="details">
+                  <h4>Обязанности:</h4>
+                  <p></p>
+                  <h4>Достижения:</h4>
+                  <p></p>
+                </div>
+              </li>
+
+              <li class="item">
+                <p id="work-3-position" class="text-big">Начальник цеха инкубации яиц</p>
+                <div class="firm-town">
+                  <p id="work-3-firm" class="text-medium">ЗАО «Орель-Лидер»</p>
+                  <p id="work-3-town" class="text-small">г.Каменское</p>
+                </div>
+                <p id="work-3-period" class="text-small">Декабрь 2006 - Март 2007</p>
+                <button type="button" hidden data-work="3" class="btn-details text-btn">
+                  Подробнее...
+                </button>
+                <div class="details">
+                  <h4>Обязанности:</h4>
+                  <p></p>
+                  <h4>Достижения:</h4>
+                  <p></p>
+                </div>
+              </li>
+
+              <li class="item">
+                <p id="work-4-position" class="text-big">Ведущий инженер цеха инкубации яиц</p>
+                <div class="firm-town">
+                  <p id="work-4-firm" class="text-medium">ЗАО «Орель-Лидер»</p>
+                  <p id="work-4-town" class="text-small">г.Каменское</p>
+                </div>
+                <p id="work-4-period" class="text-small">Март 2004 - Декабрь 2006</p>
+                <button type="button" hidden data-work="4" class="btn-details text-btn">
+                  Подробнее...
+                </button>
+                <div class="details">
+                  <h4>Обязанности:</h4>
+                  <p></p>
+                  <h4>Достижения:</h4>
+                  <p></p>
+                </div>
+              </li>
+
+              <li class="item">
+                <p id="work-5-position" class="text-big">
+                  Начальник отдела планирования и экономического анализа
+                </p>
+                <div class="firm-town">
+                  <p id="work-5-firm" class="text-medium">«ЮНИКОН ЛТД»</p>
+                  <p id="work-5-town" class="text-small">г.Днепр</p>
+                </div>
+                <p id="work-5-period" class="text-small">Ноябрь 2003 - Март 2004</p>
+                <button type="button" hidden data-work="5" class="btn-details text-btn">
+                  Подробнее...
+                </button>
+                <div class="details">
+                  <h4>Обязанности:</h4>
+                  <p></p>
+                  <h4>Достижения:</h4>
+                  <p></p>
+                </div>
+              </li>
+
+              <li class="item">
+                <p id="work-6-position" class="text-big">Аналитик аппарата управления</p>
+                <div class="firm-town">
+                  <p id="work-6-firm" class="text-medium">«ЮНИКОН ЛТД»</p>
+                  <p id="work-6-town" class="text-small">г.Днепр</p>
+                </div>
+                <p id="work-6-period" class="text-small">Декабрь 2001 - Ноябрь 2003</p>
+                <button type="button" hidden data-work="7" class="btn-details text-btn">
+                  Подробнее...
+                </button>
+                <div class="details">
+                  <h4>Обязанности:</h4>
+                  <p></p>
+                  <h4>Достижения:</h4>
+                  <p></p>
+                </div>
+              </li>
+
+              <li class="item">
+                <p id="work-7-position" class="text-big">Инженер-программист</p>
+                <div class="firm-town">
+                  <p id="work-7-firm" class="text-medium">ЗАО «Орель-Лидер»</p>
+                  <p id="work-7-town" class="text-small">г.Каменское</p>
+                </div>
+                <p id="work-7-period" class="text-small">Май 1998 - Декабрь 2001</p>
+                <button type="button" data-work="7" class="btn-details text-btn">
+                  Подробнее...
+                </button>
+                <div class="details">
+                  <h4>Обязанности:</h4>
+                  <p></p>
+                  <h4>Достижения:</h4>
+                  <p></p>
+                </div>
+              </li>
+
+              <li class="item">
+                <p id="work-8-position" class="text-big">
+                  Начальник отдела информационных технологий
+                </p>
+                <div class="firm-town">
+                  <p id="work-8-firm" class="text-medium">ООО «ДнепроБал»</p>
+                  <p id="work-8-town" class="text-small">г.Каменское</p>
+                </div>
+                <p id="work-8-period" class="text-small">Январь 1998 - Май 1998</p>
+                <button type="button" data-work="8" class="btn-details text-btn">
+                  Подробнее...
+                </button>
+                <div class="details">
+                  <h4>Обязанности:</h4>
+                  <p></p>
+                  <h4>Достижения:</h4>
+                  <p></p>
+                </div>
+              </li>
+
+              <li class="item">
+                <p id="work-9-position" class="text-big">Главный бухгалтер</p>
+                <div class="firm-town">
+                  <p id="work-9-firm" class="text-medium">ООО «ДнепроБал»</p>
+                  <p id="work-9-town" class="text-small">г.Каменское</p>
+                </div>
+                <p id="work-9-period" class="text-small">Ноябрь 1994 - Январь 1998</p>
+                <button type="button" hidden data-work="9" class="btn-details text-btn">
+                  Подробнее...
+                </button>
+                <div class="details">
+                  <h4>Обязанности:</h4>
+                  <p></p>
+                  <h4>Достижения:</h4>
+                  <p></p>
+                </div>
+              </li>
+
+              <li class="item">
+                <p id="work-10-position" class="text-big">Инженер-программист</p>
+                <div class="firm-town">
+                  <p id="work-10-firm" class="text-medium">НПСФ «Перспектива»</p>
+                  <p id="work-10-town" class="text-small">г.Каменское</p>
+                </div>
+                <p id="work-10-period" class="text-small">Апрель 1993 - Ноябрь 1994</p>
+                <button type="button" data-work="10" class="btn-details text-btn">
+                  Подробнее...
+                </button>
+                <div class="details">
+                  <h4>Обязанности:</h4>
+                  <p></p>
+                  <h4>Достижения:</h4>
+                  <p></p>
+                </div>
+              </li>
+
+              <li class="item">
+                <p id="work-11-position" class="text-big">
+                  Инженер отдела Систем Автоматизированного Проектирования
+                </p>
+                <div class="firm-town">
+                  <p id="work-11-firm" class="text-medium">УкрГИАП</p>
+                  <p id="work-11-town" class="text-small">г.Каменское</p>
+                </div>
+                <p id="work-11-period" class="text-small">Ноябрь 1991 - Апрель 1993</p>
+                <button type="button" data-work="11" class="btn-details text-btn">
+                  Подробнее...
+                </button>
+                <div class="details">
+                  <h4>Обязанности:</h4>
+                  <p></p>
+                  <h4>Достижения:</h4>
+                  <p></p>
+                </div>
+              </li>
+
+              <li class="item">
+                <p id="work-12-position" class="text-big">Инженер кафедры метизного производства</p>
+                <div class="firm-town">
+                  <p id="work-12-firm" class="text-medium">ДИИ - Индустриальный институт</p>
+                  <p id="work-12-town" class="text-small">г.Каменское</p>
+                </div>
+                <p id="work-12-period" class="text-small">Сентябрь 1991 - Ноябрь 1991</p>
+                <button type="button" data-work="12" class="btn-details text-btn">
+                  Подробнее...
+                </button>
+                <div class="details">
+                  <h4>Обязанности:</h4>
+                  <p></p>
+                  <h4>Достижения:</h4>
+                  <p></p>
+                </div>
+              </li>
+            </ul>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <!-- Футер - подвал сайта -->
+    <footer class="page-footer"></footer>
+
+    <!-- Подключение JS - Ставим перед закрывающим тегом body -->
+
+    <!-- Работа по кнопкам меню - Переключение языков  -->
+    <script src="./js/lang.js" type="module"></script>
+
+    <!-- Простановка уровней навыков (skill) в зависимости от указанного в БД (или в структуре) -->
+    <script src="./js/levels.js" type="module"></script>
+
+    <!-- Работа по кнопке - Опыт работы - Подробности  -->
+    <script src="./js/details.js" type="module"></script>
+
+    <!-- Файл по добавлению класса is-open в кнопку мобильного меню -->
+    <!-- <script src="./js/menu.js"></script> -->
+
+    <!-- Установка верхнего отступа по высоте шапки для body -->
+    <script>
+      const { height: pageHeaderHeight } = document
+        .querySelector('.page-header')
+        .getBoundingClientRect();
+
+      document.body.style.paddingTop = `${pageHeaderHeight}px`;
+      // document.body.style.paddingBottom = `12px`;
+    </script>
+
+    <!-- Установка ширины блока моего имени class="section my-name" по ширине "side-left" -->
+    <!-- <script>
+      const { width: widthSideLeft } = document.querySelector('.side-left').getBoundingClientRect();
+
+      console.log('widthSideLeft', widthSideLeft);
+
+      sectionMyNameEl = document.querySelector('.my-name');
+      console.log('sectionMyNameEl', sectionMyNameEl);
+
+      sectionMyNameEl.style.width = `${widthSideLeft}px`;
+    </script> -->
+  </body>
+</html>

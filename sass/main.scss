@@ -1,0 +1,21 @@
+/* Переменные */
+@import "variable";
+
+
+/* Шрифты */
+@import "font";
+
+/* Утилиты - Шаблоны */
+@import "placeholder";
+
+/* Блок с уровнями знаний - levels */
+@import "levels";
+
+/* Базовые настройки для сайта и body */
+@import "body";
+
+
+/* Компоненты */
+@import "components/page-header";
+@import "components/section";
+// @import "components/form-modal";
