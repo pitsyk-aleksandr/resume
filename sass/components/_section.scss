@@ -114,7 +114,7 @@
         border-radius: 12px;
     }
 
-    &.adds-info {
+    &.additions {
         /* В мобильной версии невидим блок - Дополнительная информация */
         display: none;
             /*===============================================*/
@@ -196,13 +196,9 @@
     justify-content: start;
 }
 
-.icon {
-    display: inline-block;
-    margin: 0;
-    // fill: $color-bg-main;
-}
 
-.education .item,
+
+.educations .item,
 .works .item,
 .projects .item  {
     /* Установка всех элементов в столбец */
@@ -249,60 +245,153 @@
         }
 }
 
+/* Строка  Кнопка "Подробнее"  -  Период */
+.period-btn {
+    /* Блок делаем флексом */
+    display: flex;
+    /* Установка всех элементов в строку */
+    flex-direction: row;
+    /* Расстояние между элементами */
+    gap: 20px;
+    /* Выравнивание всех элементов контейнера по второстепенной оси - по базовой линии текста */
+    align-items:center;
+}
+
+
+// Для кнопки "Подробнее" в виде кнопки с текстом
 .btn-details {
+    /* =========================================== */
     /* Блок абсолютного позиционирования кнопки */
     // position: absolute;
     // right: 50px;
     // bottom: 4px;
-    /*===========================================*/
-    padding: 4px 16px;
+    /* =========================================== */
+
+    /* =========================================== */
+    /* Блок стилей для текстового контента кнопки */
+    /* Внутренние отступы*/
+    // padding: 4px 16px;
+    /* Ширина кнопки (если текстовая кнопка) */
+    // min-width: 200px;
+    /* Текст кнопки */
+    // color: $color-black;
+    /* =========================================== */
+
+    /* =========================================== */
+    /* Блок стилей контент кнопки - фоновая иконка */
+    width: 24px;
+    height: 24px;
+        background-image: url('../icon/arrow-down.svg');
+            background-repeat: no-repeat;
+            background-size: 14px 14px;
+            background-position: center;
+
+    /* =========================================== */
+
     border-radius: 8px;
     border-style: solid;
     border-color: $color-black;
     border-width: 1px;
 
-    // Ширина кнопки (если текстовая кнопка)
-    min-width: 200px;
-
-    // Текст кнопки
-    color: $color-black;
     // Фон кнопки
-    background-color: $color-bg-main;
+    background-color: $color-bg-part;
+
     // Тень для кнопки
     // box-shadow добавляет тень к элементу. Через запятую можно задать несколько теней. 
     // Тень описывается смещениями по оси X и Y относительно элемента,
     // радиусом размытия и распространения, а также цветом (имя или rgba).
 
-    box-shadow: 2px 2px 2px 2px rgba(0, 0, 255, 0.2);
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 255, 0.2);
     
+    /* Вид курсора над кнопкой */
     cursor: pointer;
+
+    /* Анимация кнопки - разворот */
+    transform: rotate(0deg);
+    transition: transform 250ms linear, background-color 250ms linear, fill 250ms linear;
 
     &:hover,
     &:focus {
         // Изменяется цвет фона
-        background-color: $color-bg-section;
-        
+        background-color: $color-bg-section;   
     };
 
     // При показе деталей кнопка меняется (Если кнопка текстовая)
     &.show {
-        // Цвет текста кнопки
-        color: $color-white;
+
+        /* Цвет текста кнопки - Для текстового контента */
+        // color: $color-white;
+        
         // Изменяется цвет фона
-        background-color: $color-accent;
-        // Изменяется тень кнопки
-        box-shadow: 1px 1px 1px 1px rgba(0, 0, 255, 0.2);
+        background-color: $color-bg-main;
+        // Тень для кнопки
+        // box-shadow добавляет тень к элементу. Через запятую можно задать несколько теней. 
+        // Тень описывается смещениями по оси X и Y относительно элемента,
+        // радиусом размытия и распространения, а также цветом (имя или rgba).
+            
+        box-shadow: -1px -1px 1px 1px rgba(0, 0, 255, 0.2);
+        /* Анимация кнопки - разворот на 180 градусов */
+        transform: rotate(180deg);
+
     };
-
-
     
+}
+
+
+
+// Для кнопки "Подробнее" в виде кнопки с иконкой - inline-svg в теге button 
+/* Только ОТЛИЧИЯ */
+.btn-details-icon {
+    padding: 4px 6px 0px 6px;
+    // Заполнение иконки кнопки
+        fill: $color-black;  
+    // При показе деталей кнопка меняется (Если кнопка текстовая)
+    &.show {
+        // Цвет текста кнопки
+        fill: $color-white;
+    };
 }
 
 // В обычном сосоянии подробности (опыта работы) не показываются
 .details {
+    /* В пормальном состоянии - Подробности скрыты*/
     display: none;
+
     // Подробности показыавются при class="show"
     &.show {
         display: block;
     };
+
+    /* Верхняя граница - линия */
+    // border-top: 2px solid $color-black;
+    /* Ширина */ 
+    width: 100%;
+
+    /* Стили для списка - Обязанности*/
+    & .list.response {
+        /* Шаблон для немаркированного списка */
+        @extend %list;
+
+        padding: 4px;
+        /* Верхняя граница - линия */
+        border-top: 1px solid $color-black;
+        width: 100%;
+
+        list-style:circle ;
+        padding-left: 16px;
+    }
+
+    /* Стили для списка - Достижения */
+    & .list.achieve {
+        /* Шаблон для немаркированного списка */
+        @extend %list;
+        
+        padding: 4px;
+        /* Верхняя граница - линия */
+        border-top: 1px solid $color-black;
+        width: 100%;
+
+        list-style: circle;
+        padding-left: 16px;
+    }
 }

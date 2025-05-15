@@ -16,7 +16,7 @@
     <!-- Заголовок страницы, который отображается во вкладке браузера -->
     <!-- Текст заголовка содержит краткое описание содержимого веб-страницы -->
     <!-- Длина заголовка должна быть не более 60 символов, чтобы полностью поместиться в заголовке -->
-    <title>Резюме</title>
+    <title>Резюме tenderheart</title>
 
     <!-- Иконка моего резюме -->
     <!-- Для того чтобы добавить иконку сайта на вкладке, нужно использовать тег <link> 
@@ -59,13 +59,14 @@
 
         <ul class="section lang-menu">
           <li class="lang-item">
-            <button type="button" data-lang="ua" class="lang-btn text-btn">UA</button>
+            <!-- <button type="button" data-lang="ua" class="lang-btn text-btn">UA</button> -->
+            <button type="button" data-lang="0" class="lang-btn text-btn">UA</button>
           </li>
           <li class="lang-item">
-            <button type="button" data-lang="en" class="lang-btn text-btn">EN</button>
+            <button type="button" data-lang="1" class="lang-btn text-btn">EN</button>
           </li>
           <li class="lang-item">
-            <button type="button" data-lang="ru" class="lang-btn text-btn current">RU</button>
+            <button type="button" data-lang="2" class="lang-btn text-btn current">RU</button>
           </li>
         </ul>
       </div>
@@ -78,7 +79,7 @@
         <div class="side-left">
           <!-- Фотография -->
           <section class="section photo">
-            <img src="./image/my-photo.jpg" alt="Фотография" class="photo" />
+            <img src="./image/my-photo.jpg" alt="Фотография" title="Фотография" class="photo" />
           </section>
 
           <!-- Секция КОНТАКТЫ -->
@@ -107,12 +108,11 @@
           </section>
 
           <!-- Секция ТЕХНИЧЕСКИЕ НАВЫКИ -->
-          <section class="section tech-skills">
+          <!-- <section class="section tech-skills">
             <h3 id="tech-title" class="text-title-section">Технические навыки</h3>
             <ul class="list">
               <li class="item">
                 <p class="text-big">Microsoft Word</p>
-                <!-- Блок с уровнем знаний. Уровень навыка определяется дополнительным классом class="level-4" -->
                 <div class="levels level-4">
                   <div class="level one"></div>
                   <div class="level two"></div>
@@ -192,10 +192,10 @@
                 </div>
               </li>
             </ul>
-          </section>
+          </section> -->
 
           <!-- Секция ЛИЧНЫЕ КАЧЕСТВА -->
-          <section class="section soft-skills">
+          <!-- <section class="section soft-skills">
             <h3 id="soft-title" class="text-title-section">Личные качества</h3>
             <ul class="list">
               <li class="item">
@@ -217,10 +217,10 @@
                 <p id="soft-6" class="text-big">Коммуникабельность</p>
               </li>
             </ul>
-          </section>
+          </section> -->
 
           <!-- Секция ЗНАНИЕ ЯЗЫКОВ -->
-          <section class="section lang-skills">
+          <!-- <section class="section lang-skills">
             <h3 id="lang-title" class="text-title-section">Знание языков</h3>
             <ul class="list">
               <li class="item">
@@ -254,11 +254,12 @@
                 </div>
               </li>
             </ul>
-          </section>
+          </section> -->
 
           <!-- Секция ПРОЕКТЫ -->
-          <section class="section projects">
+          <!-- <section class="section projects">
             <h3 id="projects-title" class="text-title-section">Проекты - примеры</h3>
+
             <ul class="list">
               <li class="item">
                 <p id="project-1" class="text-small">Резюме - Figma</p>
@@ -279,20 +280,20 @@
                 >
               </li>
             </ul>
-          </section>
+          </section> -->
 
           <!-- Секция Дополнительная информация -->
-          <section class="section adds-info">
-            <h3 id="adds-title" class="text-title-section">Дополнительная информация</h3>
+          <!-- <section class="section additions">
+            <h3 id="additions-title" class="text-title-section">Дополнительная информация</h3>
             <ul class="list">
               <li class="item">
-                <p id="add-1" class="text-small">Готовность к командировкам</p>
+                <p id="addition-1" class="text-small">Готовность к командировкам</p>
               </li>
               <li class="item">
-                <p id="add-2" class="text-small">Водитель с правами категории “B”</p>
+                <p id="addition-2" class="text-small">Водитель с правами категории “B”</p>
               </li>
             </ul>
-          </section>
+          </section> -->
         </div>
 
         <!-- Правая сторона сайта -->
@@ -313,10 +314,10 @@
           </section>
 
           <!-- Секция ОБРАЗОВАНИЕ -->
-          <section class="section education">
+          <section class="section educations">
             <h3 id="edu-title" class="text-title-section">Образование</h3>
-            <ul class="list">
-              <li class="item">
+            <ul class="list educations">
+              <!-- <li class="item education">
                 <p id="edu-1-position" class="text-big">Инженер-металлург</p>
                 <div class="firm-town">
                   <p id="edu-1-firm" class="text-medium">ДИИ - Индустриальный институт</p>
@@ -331,15 +332,20 @@
                   <p id="edu-2-town" class="text-small">г.Каменское</p>
                 </div>
                 <p id="edu-2-period" class="text-small">Октябрь 1994 - Декабрь 1994</p>
-              </li>
+              </li> -->
             </ul>
           </section>
 
           <!-- Секция ОПЫТ РАБОТЫ -->
+          <!-- <button type="button" data-work="1" class="btn-details-icon">
+                        <svg width="16" height="16" class="icon">
+                          <use href="./icon/icons.svg#icon-arrow-down" class="icon-use"></use>
+                        </svg>
+                      </button> -->
           <section class="section works">
             <h3 id="works-title" class="text-title-section">Опыт работы</h3>
-            <ul class="list">
-              <li class="item">
+            <ul class="list works">
+              <!-- <li class="item">
                 <p id="work-1-position" class="text-big">
                   Заместитель директора по качеству и контролю
                 </p>
@@ -347,15 +353,32 @@
                   <p id="work-1-firm" class="text-medium">ООО «ДДАП-РАКС»</p>
                   <p id="work-1-town" class="text-small">г.Каменское</p>
                 </div>
-                <p id="work-1-period" class="text-small">Февраль 2009 - Ноябрь 2023</p>
-                <button type="button" data-work="1" class="btn-details text-btn">
-                  Подробнее...
-                </button>
+                <div class="period-btn">
+                  <button type="button" data-work="1" class="btn-details text-btn"></button>
+
+                  <p id="work-1-period" class="text-small">Февраль 2009 - Ноябрь 2023</p>
+                </div>
+
+                
                 <div class="details">
-                  <h4>Обязанности:</h4>
-                  <p></p>
-                  <h4>Достижения:</h4>
-                  <p></p>
+                  <div class="respons">
+                    <h4 class="respons-title text-medium">Обязанности:</h4>
+                    <ul class="respons-list">
+                      <li class="respons-item text-small">Организация работы в коллективе.</li>
+                      <li class="respons-item text-small">
+                        Разработка должностных инструкций и распределение обязанностей.
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="achieve" hidden>
+                    <h4 class="achieve-title text-medium">Достижения:</h4>
+                    <ul class="achieve-list">
+                      <li class="achieve-item text-small">Организация работы в коллективе.</li>
+                      <li class="achieve-item text-small">
+                        Разработка должностных инструкций и распределение обязанностей.
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </li>
 
@@ -366,9 +389,7 @@
                   <p id="work-2-town" class="text-small">г.Каменское</p>
                 </div>
                 <p id="work-2-period" class="text-small">Май 2007 - Февраль 2009</p>
-                <button type="button" hidden data-work="2" class="btn-details text-btn">
-                  Подробнее...
-                </button>
+                <button type="button" hidden data-work="2" class="btn-details text-btn"></button>
                 <div class="details">
                   <h4>Обязанности:</h4>
                   <p></p>
@@ -384,9 +405,7 @@
                   <p id="work-3-town" class="text-small">г.Каменское</p>
                 </div>
                 <p id="work-3-period" class="text-small">Декабрь 2006 - Март 2007</p>
-                <button type="button" hidden data-work="3" class="btn-details text-btn">
-                  Подробнее...
-                </button>
+                <button type="button" hidden data-work="3" class="btn-details text-btn"></button>
                 <div class="details">
                   <h4>Обязанности:</h4>
                   <p></p>
@@ -402,9 +421,7 @@
                   <p id="work-4-town" class="text-small">г.Каменское</p>
                 </div>
                 <p id="work-4-period" class="text-small">Март 2004 - Декабрь 2006</p>
-                <button type="button" hidden data-work="4" class="btn-details text-btn">
-                  Подробнее...
-                </button>
+                <button type="button" hidden data-work="4" class="btn-details text-btn"></button>
                 <div class="details">
                   <h4>Обязанности:</h4>
                   <p></p>
@@ -422,9 +439,7 @@
                   <p id="work-5-town" class="text-small">г.Днепр</p>
                 </div>
                 <p id="work-5-period" class="text-small">Ноябрь 2003 - Март 2004</p>
-                <button type="button" hidden data-work="5" class="btn-details text-btn">
-                  Подробнее...
-                </button>
+                <button type="button" hidden data-work="5" class="btn-details text-btn"></button>
                 <div class="details">
                   <h4>Обязанности:</h4>
                   <p></p>
@@ -440,9 +455,7 @@
                   <p id="work-6-town" class="text-small">г.Днепр</p>
                 </div>
                 <p id="work-6-period" class="text-small">Декабрь 2001 - Ноябрь 2003</p>
-                <button type="button" hidden data-work="7" class="btn-details text-btn">
-                  Подробнее...
-                </button>
+                <button type="button" hidden data-work="7" class="btn-details text-btn"></button>
                 <div class="details">
                   <h4>Обязанности:</h4>
                   <p></p>
@@ -458,9 +471,7 @@
                   <p id="work-7-town" class="text-small">г.Каменское</p>
                 </div>
                 <p id="work-7-period" class="text-small">Май 1998 - Декабрь 2001</p>
-                <button type="button" data-work="7" class="btn-details text-btn">
-                  Подробнее...
-                </button>
+                <button type="button" data-work="7" class="btn-details text-btn"></button>
                 <div class="details">
                   <h4>Обязанности:</h4>
                   <p></p>
@@ -478,9 +489,7 @@
                   <p id="work-8-town" class="text-small">г.Каменское</p>
                 </div>
                 <p id="work-8-period" class="text-small">Январь 1998 - Май 1998</p>
-                <button type="button" data-work="8" class="btn-details text-btn">
-                  Подробнее...
-                </button>
+                <button type="button" data-work="8" class="btn-details text-btn"></button>
                 <div class="details">
                   <h4>Обязанности:</h4>
                   <p></p>
@@ -496,9 +505,7 @@
                   <p id="work-9-town" class="text-small">г.Каменское</p>
                 </div>
                 <p id="work-9-period" class="text-small">Ноябрь 1994 - Январь 1998</p>
-                <button type="button" hidden data-work="9" class="btn-details text-btn">
-                  Подробнее...
-                </button>
+                <button type="button" hidden data-work="9" class="btn-details text-btn"></button>
                 <div class="details">
                   <h4>Обязанности:</h4>
                   <p></p>
@@ -514,9 +521,7 @@
                   <p id="work-10-town" class="text-small">г.Каменское</p>
                 </div>
                 <p id="work-10-period" class="text-small">Апрель 1993 - Ноябрь 1994</p>
-                <button type="button" data-work="10" class="btn-details text-btn">
-                  Подробнее...
-                </button>
+                <button type="button" data-work="10" class="btn-details text-btn"></button>
                 <div class="details">
                   <h4>Обязанности:</h4>
                   <p></p>
@@ -534,9 +539,7 @@
                   <p id="work-11-town" class="text-small">г.Каменское</p>
                 </div>
                 <p id="work-11-period" class="text-small">Ноябрь 1991 - Апрель 1993</p>
-                <button type="button" data-work="11" class="btn-details text-btn">
-                  Подробнее...
-                </button>
+                <button type="button" data-work="11" class="btn-details text-btn"></button>
                 <div class="details">
                   <h4>Обязанности:</h4>
                   <p></p>
@@ -552,16 +555,14 @@
                   <p id="work-12-town" class="text-small">г.Каменское</p>
                 </div>
                 <p id="work-12-period" class="text-small">Сентябрь 1991 - Ноябрь 1991</p>
-                <button type="button" data-work="12" class="btn-details text-btn">
-                  Подробнее...
-                </button>
+                <button type="button" data-work="12" class="btn-details text-btn"></button>
                 <div class="details">
                   <h4>Обязанности:</h4>
                   <p></p>
                   <h4>Достижения:</h4>
                   <p></p>
                 </div>
-              </li>
+              </li> -->
             </ul>
           </section>
         </div>
@@ -573,17 +574,14 @@
 
     <!-- Подключение JS - Ставим перед закрывающим тегом body -->
 
-    <!-- Работа по кнопкам меню - Переключение языков  -->
-    <script src="./js/lang.js" type="module"></script>
+    <!-- Формированию динамического контента из lang-db.js + Работа по кнопкам меню - Переключение языков -->
+    <script src="./js/make-html.js" type="module"></script>
 
-    <!-- Простановка уровней навыков (skill) в зависимости от указанного в БД (или в структуре) -->
-    <script src="./js/levels.js" type="module"></script>
+    <!-- Статический сайт = Работа по кнопкам меню - Переключение языков  -->
+    <!-- <script src="./js/lang.js" type="module"></script> -->
 
     <!-- Работа по кнопке - Опыт работы - Подробности  -->
     <script src="./js/details.js" type="module"></script>
-
-    <!-- Файл по добавлению класса is-open в кнопку мобильного меню -->
-    <!-- <script src="./js/menu.js"></script> -->
 
     <!-- Установка верхнего отступа по высоте шапки для body -->
     <script>

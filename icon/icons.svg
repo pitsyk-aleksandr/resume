@@ -21,10 +21,13 @@
 <symbol id="icon-checkmark2" viewBox="0 0 32 32">
 <path d="M12.42 28.678l-12.433-12.238 6.168-6.071 6.265 6.167 13.426-13.214 6.168 6.071-19.594 19.285zM3.372 16.441l9.048 8.905 16.208-15.953-2.782-2.739-13.426 13.214-6.265-6.167-2.782 2.739z"></path>
 </symbol>
-<symbol id="icon-arrow-up" viewBox="0 0 32 32">
+<symbol id="icon-arrow-down" viewBox="0 0 16 16">
+<path d="M5 15.5L9.6875 8H6.875V0H3.125V8H0.3125L5 15.5Z"></path>
+</symbol>
+<symbol id="icon-arrow-up1" viewBox="0 0 32 32">
 <path d="M16 1l-15 15h9v16h12v-16h9z"></path>
 </symbol>
-<symbol id="icon-arrow-down" viewBox="0 0 32 32">
+<symbol id="icon-arrow-down1" viewBox="0 0 32 32">
 <path d="M16 31l15-15h-9v-16h-12v16h-9z"></path>
 </symbol>
 <symbol id="icon-arrow-up2" viewBox="0 0 32 32">

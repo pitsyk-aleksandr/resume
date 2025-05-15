@@ -62,7 +62,7 @@
 /* Утилиты - Шаблоны */
 /* Утилиты - ШАБЛОНЫ - placeholder */
 /* Шаблон для немаркированного списка */
-.list, .page-header .lang-menu, body {
+.details .list.achieve, .details .list.response, .list, .page-header .lang-menu, body {
   /* Сбросить все отступы по умолчанию */
   padding: 0;
   margin: 0;
@@ -225,6 +225,11 @@ body {
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
+}
+
+.icon {
+  display: inline-block;
+  margin: 0;
 }
 
 /* Компоненты */
@@ -478,7 +483,7 @@ header {
   height: auto;
   border-radius: 12px;
 }
-.section.adds-info {
+.section.additions {
   /* В мобильной версии невидим блок - Дополнительная информация */
   display: none;
   /*===============================================*/
@@ -487,7 +492,7 @@ header {
   /* Установка для размера - больше планшета */
 }
 @media screen and (min-width: 768px) {
-  .section.adds-info {
+  .section.additions {
     /* Видимость блока - Дополнительная информация */
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
@@ -563,12 +568,7 @@ header {
           justify-content: start;
 }
 
-.icon {
-  display: inline-block;
-  margin: 0;
-}
-
-.education .item,
+.educations .item,
 .works .item,
 .projects .item {
   /* Установка всех элементов в столбец */
@@ -623,34 +623,110 @@ header {
   }
 }
 
+/* Строка  Кнопка "Подробнее"  -  Период */
+.period-btn {
+  /* Блок делаем флексом */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /* Установка всех элементов в строку */
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  /* Расстояние между элементами */
+  gap: 20px;
+  /* Выравнивание всех элементов контейнера по второстепенной оси - по базовой линии текста */
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .btn-details {
+  /* =========================================== */
   /* Блок абсолютного позиционирования кнопки */
-  /*===========================================*/
-  padding: 4px 16px;
+  /* =========================================== */
+  /* =========================================== */
+  /* Блок стилей для текстового контента кнопки */
+  /* Внутренние отступы*/
+  /* Ширина кнопки (если текстовая кнопка) */
+  /* Текст кнопки */
+  /* =========================================== */
+  /* =========================================== */
+  /* Блок стилей контент кнопки - фоновая иконка */
+  width: 24px;
+  height: 24px;
+  background-image: url("../icon/arrow-down.svg");
+  background-repeat: no-repeat;
+  background-size: 14px 14px;
+  background-position: center;
+  /* =========================================== */
   border-radius: 8px;
   border-style: solid;
   border-color: #0D0D0D;
   border-width: 1px;
-  min-width: 200px;
-  color: #0D0D0D;
-  background-color: #FEEFD6;
-  -webkit-box-shadow: 2px 2px 2px 2px rgba(0, 0, 255, 0.2);
-          box-shadow: 2px 2px 2px 2px rgba(0, 0, 255, 0.2);
+  background-color: #8FDCDE;
+  -webkit-box-shadow: 1px 1px 1px 1px rgba(0, 0, 255, 0.2);
+          box-shadow: 1px 1px 1px 1px rgba(0, 0, 255, 0.2);
+  /* Вид курсора над кнопкой */
   cursor: pointer;
+  /* Анимация кнопки - разворот */
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  -webkit-transition: background-color 250ms linear, fill 250ms linear, -webkit-transform 250ms linear;
+  transition: background-color 250ms linear, fill 250ms linear, -webkit-transform 250ms linear;
+  transition: transform 250ms linear, background-color 250ms linear, fill 250ms linear;
+  transition: transform 250ms linear, background-color 250ms linear, fill 250ms linear, -webkit-transform 250ms linear;
 }
 .btn-details:hover, .btn-details:focus {
   background-color: #D2E1D8;
 }
 .btn-details.show {
-  color: #FBFBFB;
-  background-color: #24156E;
-  -webkit-box-shadow: 1px 1px 1px 1px rgba(0, 0, 255, 0.2);
-          box-shadow: 1px 1px 1px 1px rgba(0, 0, 255, 0.2);
+  /* Цвет текста кнопки - Для текстового контента */
+  background-color: #FEEFD6;
+  -webkit-box-shadow: -1px -1px 1px 1px rgba(0, 0, 255, 0.2);
+          box-shadow: -1px -1px 1px 1px rgba(0, 0, 255, 0.2);
+  /* Анимация кнопки - разворот на 180 градусов */
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+/* Только ОТЛИЧИЯ */
+.btn-details-icon {
+  padding: 4px 6px 0px 6px;
+  fill: #0D0D0D;
+}
+.btn-details-icon.show {
+  fill: #FBFBFB;
 }
 
 .details {
+  /* В пормальном состоянии - Подробности скрыты*/
   display: none;
+  /* Верхняя граница - линия */
+  /* Ширина */
+  width: 100%;
+  /* Стили для списка - Обязанности*/
+  /* Стили для списка - Достижения */
 }
 .details.show {
   display: block;
+}
+.details .list.response {
+  /* Шаблон для немаркированного списка */
+  padding: 4px;
+  /* Верхняя граница - линия */
+  border-top: 1px solid #0D0D0D;
+  width: 100%;
+  list-style: circle;
+  padding-left: 16px;
+}
+.details .list.achieve {
+  /* Шаблон для немаркированного списка */
+  padding: 4px;
+  /* Верхняя граница - линия */
+  border-top: 1px solid #0D0D0D;
+  width: 100%;
+  list-style: circle;
+  padding-left: 16px;
 }/*# sourceMappingURL=main.css.map */
