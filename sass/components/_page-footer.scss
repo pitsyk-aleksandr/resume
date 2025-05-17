@@ -15,7 +15,7 @@ footer {
     };
         
     /* Установка для размера - больше планшета */
-    @media screen and (min-width:$tablet) {
+    @media screen and (min-width:$desktop) {
         display: block;
         position: relative;
         // Внутренние отступы 
@@ -64,6 +64,7 @@ footer {
         
             // Цвет кнопки
             background-color: $color-bg-section;
+            fill: $color-black;
         
             /* Вид курсора над кнопкой */
             cursor: pointer;
