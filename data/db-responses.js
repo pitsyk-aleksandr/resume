@@ -1,0 +1,1327 @@
+/* Для динамического сайта    */
+
+// Подробности для работ 
+// Контент на разных языках = Массив объектов (структур) - приближенный к БД
+// -----------------------------------------------------------
+
+export default {
+    
+    /* Обязанности на работе */
+    responses: [
+        /* ТОВ «ДДАП-РАКС» - Заступник директора з якості та контролю */
+        /* - work_number: 0     = Номер работы (вне зависимости от языка) */
+        /* - work_id: 0         = Id работы (с привязкой к языку) */
+        {
+            response_id: 0,
+            work_id: 0,
+            work_number: 0,
+            lang_id: 0,
+            name: "Організація роботи у колективі",
+        },
+        {
+            response_id: 1,
+            work_id: 12,
+            work_number: 0,
+            lang_id: 1,
+            name: "Organization of work in a team",
+        },
+        {
+            response_id: 2,
+            work_id: 24,
+            work_number: 0,
+            lang_id: 2,
+            name: "Организация работы в коллективе",
+        },
+
+        {
+            response_id: 3,
+            work_id: 0,
+            work_number: 0,
+            lang_id: 0,
+            name: "Розробка посадових інструкцій",
+        },
+        {
+            response_id: 4,
+            work_id: 12,
+            work_number: 0,
+            lang_id: 1,
+            name: "Development of job descriptions",
+        },
+        {
+            response_id: 5,
+            work_id: 24,
+            work_number: 0,
+            lang_id: 2,
+            name: "Разработка должностных инструкций",
+        },
+
+        {
+            response_id: 6,
+            work_id: 0,
+            work_number: 0,
+            lang_id: 0,
+            name: "Участь у розробці технологічної документації",
+        },
+        {
+            response_id: 7,
+            work_id: 12,
+            work_number: 0,
+            lang_id: 1,
+            name: "Participation in the development of technological documentation",
+        },
+        {
+            response_id: 8,
+            work_id: 24,
+            work_number: 0,
+            lang_id: 2,
+            name: "Участие в разработке технологической документации",
+        },
+        
+        {
+            response_id: 9,
+            work_id: 0,
+            work_number: 0,
+            lang_id: 0,
+            name: "Участь у розробці методик та інструкцій з контролю якості продукції",
+        },
+        {
+            response_id: 10,
+            work_id: 12,
+            work_number: 0,
+            lang_id: 1,
+            name: "Participation in the development of methods and instructions for product quality control",
+        },
+        {
+            response_id: 11,
+            work_id: 24,
+            work_number: 0,
+            lang_id: 2,
+            name: "Участие в разработке методик и инструкций по контролю качества продукции",
+        },        
+                
+        {
+            response_id: 12,
+            work_id: 0,
+            work_number: 0,
+            lang_id: 0,
+            name: "Впровадження нового обладнання та технологій",
+        },
+        {
+            response_id: 13,
+            work_id: 12,
+            work_number: 0,
+            lang_id: 1,
+            name: "Implementation of new equipment and technologies",
+        },
+        {
+            response_id: 14,
+            work_id: 24,
+            work_number: 0,
+            lang_id: 2,
+            name: "Внедрение нового оборудования и технологий",
+        },
+                       
+        {
+            response_id: 15,
+            work_id: 0,
+            work_number: 0,
+            lang_id: 0,
+            name: "Розробка технічних вимог та технічних умов на одержувану продукцію",
+        },
+        {
+            response_id: 16,
+            work_id: 12,
+            work_number: 0,
+            lang_id: 1,
+            name: "Development of technical requirements and specifications for the products received",
+        },
+        {
+            response_id: 17,
+            work_id: 24,
+            work_number: 0,
+            lang_id: 2,
+            name: "Разработка технических требований и технических условий на получаемую продукцию",
+        },
+       
+        {
+            response_id: 18,
+            work_id: 0,
+            work_number: 0,
+            lang_id: 0,
+            name: "Організація та проведення аудитів на підприємствах - постачальниках продукції",
+        },
+        {
+            response_id: 19,
+            work_id: 12,
+            work_number: 0,
+            lang_id: 1,
+            name: "Organization and conduct of audits at enterprises - suppliers of products",
+        },
+        {
+            response_id: 20,
+            work_id: 24,
+            work_number: 0,
+            lang_id: 2,
+            name: "Организация и проведение аудитов на предприятиях - поставщиках продукции",
+        },
+       
+        {
+            response_id: 21,
+            work_id: 0,
+            work_number: 0,
+            lang_id: 0,
+            name: "Організація та участь в аудитах підприємств зовнішніми аудиторами",
+        },
+        {
+            response_id: 22,
+            work_id: 12,
+            work_number: 0,
+            lang_id: 1,
+            name: "Organization and participation in enterprise audits by external auditors",
+        },
+        {
+            response_id: 23,
+            work_id: 24,
+            work_number: 0,
+            lang_id: 2,
+            name: "Организация и участие в аудитах предприятия внешними аудиторами",
+        },
+
+        {
+            response_id: 24,
+            work_id: 0,
+            work_number: 0,
+            lang_id: 0,
+            name: "Участь в сертифікації підприємства і продукції",
+        },
+        {
+            response_id: 25,
+            work_id: 12,
+            work_number: 0,
+            lang_id: 1,
+            name: "Participation in the certification of the enterprise and production",
+        },
+        {
+            response_id: 26,
+            work_id: 24,
+            work_number: 0,
+            lang_id: 2,
+            name: "Участие в сертификации предприятия и продукции",
+        },
+
+        {
+            response_id: 27,
+            work_id: 0,
+            work_number: 0,
+            lang_id: 0,
+            name: "Участь в договорній роботі (складання та перевірка договорів і угод)",
+        },
+        {
+            response_id: 28,
+            work_id: 12,
+            work_number: 0,
+            lang_id: 1,
+            name: "Participation in contractual work (drafting and verification of contracts and agreements)",
+        },
+        {
+            response_id: 29,
+            work_id: 24,
+            work_number: 0,
+            lang_id: 2,
+            name: "Участие в договорной работе (составление и проверка договоров и соглашений)",
+        },
+        
+        {
+            response_id: 30,
+            work_id: 0,
+            work_number: 0,
+            lang_id: 0,
+            name: "Листування з контрагентами",
+        },
+        {
+            response_id: 31,
+            work_id: 12,
+            work_number: 0,
+            lang_id: 1,
+            name: "Correspondence with counterparties",
+        },
+        {
+            response_id: 32,
+            work_id: 24,
+            work_number: 0,
+            lang_id: 2,
+            name: "Переписка с контрагентами",
+        },
+                
+        {
+            response_id: 33,
+            work_id: 0,
+            work_number: 0,
+            lang_id: 0,
+            name: "Претензійна робота із постачальниками продукції",
+        },
+        {
+            response_id: 34,
+            work_id: 12,
+            work_number: 0,
+            lang_id: 1,
+            name: "Claims work with product suppliers",
+        },
+        {
+            response_id: 35,
+            work_id: 24,
+            work_number: 0,
+            lang_id: 2,
+            name: "Претензионная работа с поставщиками продукции",
+        },
+                        
+        {
+            response_id: 36,
+            work_id: 0,
+            work_number: 0,
+            lang_id: 0,
+            name: "Претензійна робота з покупцями та замовниками",
+        },
+        {
+            response_id: 37,
+            work_id: 12,
+            work_number: 0,
+            lang_id: 1,
+            name: "Claims work with customers and clients",
+        },
+        {
+            response_id: 38,
+            work_id: 24,
+            work_number: 0,
+            lang_id: 2,
+            name: "Претензионная работа с покупателями и заказчиками",
+        },
+
+        {
+            response_id: 39,
+            work_id: 0,
+            work_number: 0,
+            lang_id: 0,
+            name: "Організація навчання співробітників",
+        },
+        {
+            response_id: 40,
+            work_id: 12,
+            work_number: 0,
+            lang_id: 1,
+            name: "Organization of employee training",
+        },
+        {
+            response_id: 41,
+            work_id: 24,
+            work_number: 0,
+            lang_id: 2,
+            name: "Организация обучения сотрудников",
+        },
+  
+        {
+            response_id: 42,
+            work_id: 0,
+            work_number: 0,
+            lang_id: 0,
+            name: "Розробка нових форм документів (сертифікатів якості, звітів тощо)",
+        },
+        {
+            response_id: 43,
+            work_id: 12,
+            work_number: 0,
+            lang_id: 1,
+            name: "Development of new forms of documents (quality certificates, reports, etc.)",
+        },
+        {
+            response_id: 44,
+            work_id: 24,
+            work_number: 0,
+            lang_id: 2,
+            name: "Разработка новых форм документов (сертификатов качества, отчетов и т.д.)",
+        },
+
+        {
+            response_id: 45,
+            work_id: 0,
+            work_number: 0,
+            lang_id: 0,
+            name: "Підготовка звітів щодо якості продукції",
+        },
+        {
+            response_id: 46,
+            work_id: 12,
+            work_number: 0,
+            lang_id: 1,
+            name: "Preparation of product quality reports",
+        },
+        {
+            response_id: 47,
+            work_id: 24,
+            work_number: 0,
+            lang_id: 2,
+            name: "Составление отчетов по качеству продукции",
+        },
+       
+        {
+            response_id: 45,
+            work_id: 0,
+            work_number: 0,
+            lang_id: 0,
+            name: "Підготовка статей про роботу підприємства",
+        },
+        {
+            response_id: 46,
+            work_id: 12,
+            work_number: 0,
+            lang_id: 1,
+            name: "Preparation of articles about the work of the enterprise",
+        },
+        {
+            response_id: 47,
+            work_id: 24,
+            work_number: 0,
+            lang_id: 2,
+            name: "Подготовка статей о работе предприятия",
+        },
+
+
+        {
+            response_id: 48,
+            work_id: 1,
+            work_number: 1,
+            lang_id: 0,
+            name: "Розробка планів розвитку підприємства",
+        },
+        {
+            response_id: 49,
+            work_id: 13,
+            work_number: 1,
+            lang_id: 1,
+            name: "Development of enterprise development plans",
+        },
+        {
+            response_id: 50,
+            work_id: 25,
+            work_number: 1,
+            lang_id: 2,
+            name: "Разработка планов развития предприятия",
+        },
+
+        {
+            response_id: 51,
+            work_id: 1,
+            work_number: 1,
+            lang_id: 0,
+            name: "Участь у проектуванні нових виробничих дільниць",
+        },
+        {
+            response_id: 52,
+            work_id: 13,
+            work_number: 1,
+            lang_id: 1,
+            name: "Participation in the design of new production sites",
+        },
+        {
+            response_id: 53,
+            work_id: 25,
+            work_number: 1,
+            lang_id: 2,
+            name: "Участие в проектировании новых производственных участков",
+        },
+
+        {
+            response_id: 54,
+            work_id: 1,
+            work_number: 1,
+            lang_id: 0,
+            name: "Контроль виконання будівельних та монтажних робіт",
+        },
+        {
+            response_id: 55,
+            work_id: 13,
+            work_number: 1,
+            lang_id: 1,
+            name: "Control over the execution of construction and installation works",
+        },
+        {
+            response_id: 56,
+            work_id: 25,
+            work_number: 1,
+            lang_id: 2,
+            name: "Контроль выполнения строительных и монтажных работ",
+        },
+
+
+        {
+            response_id: 57,
+            work_id: 2,
+            work_number: 2,
+            lang_id: 0,
+            name: "Організація роботи у колективі",
+        },
+        {
+            response_id: 58,
+            work_id: 14,
+            work_number: 2,
+            lang_id: 1,
+            name: "Organization of work in a team",
+        },
+        {
+            response_id: 59,
+            work_id: 26,
+            work_number: 2,
+            lang_id: 2,
+            name: "Организация работы в коллективе",
+        },
+
+        {
+            response_id: 60,
+            work_id: 2,
+            work_number: 2,
+            lang_id: 0,
+            name: "Контроль технологічного процесу виведення курчат",
+        },
+        {
+            response_id: 61,
+            work_id: 14,
+            work_number: 2,
+            lang_id: 1,
+            name: "Control of the technological process of hatching chickens",
+        },
+        {
+            response_id: 62,
+            work_id: 26,
+            work_number: 2,
+            lang_id: 2,
+            name: "Контроль технологического процесса вывода цыплят",
+        },
+
+        {
+            response_id: 63,
+            work_id: 2,
+            work_number: 2,
+            lang_id: 0,
+            name: "Контроль ремонту та технічного обслуговування обладнання",
+        },
+        {
+            response_id: 64,
+            work_id: 14,
+            work_number: 2,
+            lang_id: 1,
+            name: "Control of repair and maintenance of equipment",
+        },
+        {
+            response_id: 65,
+            work_id: 26,
+            work_number: 2,
+            lang_id: 2,
+            name: "Контроль ремонта и технического обслуживания оборудования",
+        },
+
+        {
+            response_id: 66,
+            work_id: 2,
+            work_number: 2,
+            lang_id: 0,
+            name: "Організація постачання цеху",
+        },
+        {
+            response_id: 67,
+            work_id: 14,
+            work_number: 2,
+            lang_id: 1,
+            name: "Organization of workshop supply",
+        },
+        {
+            response_id: 68,
+            work_id: 26,
+            work_number: 2,
+            lang_id: 2,
+            name: "Организация снабжение цеха",
+        },
+
+        {
+            response_id: 69,
+            work_id: 2,
+            work_number: 2,
+            lang_id: 0,
+            name: "Облік роботи та розрахунок заробітної плати працівників цеху",
+        },
+        {
+            response_id: 70,
+            work_id: 14,
+            work_number: 2,
+            lang_id: 1,
+            name: "Accounting of work and calculation of wages of shop employees",
+        },
+        {
+            response_id: 71,
+            work_id: 26,
+            work_number: 2,
+            lang_id: 2,
+            name: "Учет работы и расчет заработной платы сотрудников цеха",
+        },
+  
+        {
+            response_id: 72,
+            work_id: 2,
+            work_number: 2,
+            lang_id: 0,
+            name: "Ведення цехової звітності",
+        },
+        {
+            response_id: 73,
+            work_id: 14,
+            work_number: 2,
+            lang_id: 1,
+            name: "Reporting on the shop",
+        },
+        {
+            response_id: 74,
+            work_id: 26,
+            work_number: 2,
+            lang_id: 2,
+            name: "Ведение отчетности по цеху",
+        },
+
+
+        {
+            response_id: 75,
+            work_id: 3,
+            work_number: 3,
+            lang_id: 0,
+            name: "Контроль робіт з проектування та будівництва цеху інкубації",
+        },
+        {
+            response_id: 76,
+            work_id: 15,
+            work_number: 3,
+            lang_id: 1,
+            name: "Supervision of design and construction works of the incubation workshop",
+        },
+        {
+            response_id: 77,
+            work_id: 27,
+            work_number: 3,
+            lang_id: 2,
+            name: "Контроль работ по проектированию и строительству цеха инкубации",
+        },
+
+        {
+            response_id: 78,
+            work_id: 3,
+            work_number: 3,
+            lang_id: 0,
+            name: "Листування з постачальниками та підрядниками",
+        },
+        {
+            response_id: 79,
+            work_id: 15,
+            work_number: 3,
+            lang_id: 1,
+            name: "Correspondence with suppliers and contractors",
+        },
+        {
+            response_id: 80,
+            work_id: 27,
+            work_number: 3,
+            lang_id: 2,
+            name: "Переписка с поставщиками и подрядчиками",
+        },
+
+        {
+            response_id: 81,
+            work_id: 3,
+            work_number: 3,
+            lang_id: 0,
+            name: "Організація та монтаж інкубаційного та допоміжного обладнання",
+        },
+        {
+            response_id: 82,
+            work_id: 15,
+            work_number: 3,
+            lang_id: 1,
+            name: "Organization and installation of incubation and auxiliary equipment",
+        },
+        {
+            response_id: 83,
+            work_id: 27,
+            work_number: 3,
+            lang_id: 2,
+            name: "Организация и монтаж инкубационного и вспомогательного оборудования",
+        },
+
+        {
+            response_id: 84,
+            work_id: 3,
+            work_number: 3,
+            lang_id: 0,
+            name: "Керівництво інженерною службою цеху інкубації",
+        },
+        {
+            response_id: 85,
+            work_id: 15,
+            work_number: 3,
+            lang_id: 1,
+            name: "Management of the engineering service of the incubation workshop",
+        },
+        {
+            response_id: 86,
+            work_id: 27,
+            work_number: 3,
+            lang_id: 2,
+            name: "Руководство инженерной службой цеха инкубации",
+        },
+
+        {
+            response_id: 87,
+            work_id: 3,
+            work_number: 3,
+            lang_id: 0,
+            name: "Створення технічних регламентів щодо щоденного та циклічного обслуговування обладнання",
+        },
+        {
+            response_id: 88,
+            work_id: 15,
+            work_number: 3,
+            lang_id: 1,
+            name: "Creation of technical regulations for daily and cyclic maintenance of equipment",
+        },
+        {
+            response_id: 89,
+            work_id: 27,
+            work_number: 3,
+            lang_id: 2,
+            name: "Создание технических регламентов по ежедневному и циклическому обслуживанию оборудования",
+        },
+
+        {
+            response_id: 90,
+            work_id: 3,
+            work_number: 3,
+            lang_id: 0,
+            name: "Контроль та здійснення технічного обслуговування та ремонту основного обладнання, систем водопостачання, охолодження та котельні",
+        },
+        {
+            response_id: 91,
+            work_id: 15,
+            work_number: 3,
+            lang_id: 1,
+            name: "Control and implementation of maintenance and repair of main equipment, water supply systems, cooling and boiler room",
+        },
+        {
+            response_id: 92,
+            work_id: 27,
+            work_number: 3,
+            lang_id: 2,
+            name: "Контроль и осуществление технического обслуживания и ремонта основного оборудования, систем водоснабжения, охлаждения и котельной",
+        },
+
+        {
+            response_id: 93,
+            work_id: 3,
+            work_number: 3,
+            lang_id: 0,
+            name: "Організація постачання інженерної служби цеху",
+        },
+        {
+            response_id: 94,
+            work_id: 15,
+            work_number: 3,
+            lang_id: 1,
+            name: "Organization of supply of the engineering service of the workshop",
+        },
+        {
+            response_id: 95,
+            work_id: 27,
+            work_number: 3,
+            lang_id: 2,
+            name: "Организация снабжения инженерной службы цеха",
+        },
+
+
+        {
+            response_id: 96,
+            work_id: 4,
+            work_number: 4,
+            lang_id: 0,
+            name: "Розробка планів за видами діяльності",
+        },
+        {
+            response_id: 97,
+            work_id: 16,
+            work_number: 4,
+            lang_id: 1,
+            name: "Development of plans for types of activities",
+        },
+        {
+            response_id: 98,
+            work_id: 28,
+            work_number: 4,
+            lang_id: 2,
+            name: "Разработка планов по видам деятельности",
+        },
+
+        {
+            response_id: 99,
+            work_id: 4,
+            work_number: 4,
+            lang_id: 0,
+            name: "Розробка показників роботи відділів",
+        },
+        {
+            response_id: 100,
+            work_id: 16,
+            work_number: 4,
+            lang_id: 1,
+            name: "Developing performance indicators for departments",
+        },
+        {
+            response_id: 101,
+            work_id: 28,
+            work_number: 4,
+            lang_id: 2,
+            name: "Разработка показателей работы по отделам",
+        },
+
+        {
+            response_id: 102,
+            work_id: 4,
+            work_number: 4,
+            lang_id: 0,
+            name: "Контроль техніко-економічних показників",
+        },
+        {
+            response_id: 103,
+            work_id: 16,
+            work_number: 4,
+            lang_id: 1,
+            name: "Control of technical and economic indicators",
+        },
+        {
+            response_id: 104,
+            work_id: 28,
+            work_number: 4,
+            lang_id: 2,
+            name: "Контроль технико-экономических показателей",
+        },
+
+        {
+            response_id: 105,
+            work_id: 4,
+            work_number: 4,
+            lang_id: 0,
+            name: "Аналіз виконання проектів відділами підприємства",
+        },
+        {
+            response_id: 106,
+            work_id: 16,
+            work_number: 4,
+            lang_id: 1,
+            name: "Analysis of project implementation by enterprise departments",
+        },
+        {
+            response_id: 107,
+            work_id: 28,
+            work_number: 4,
+            lang_id: 2,
+            name: "Анализ выполнения проектов по отделам предприятия",
+        },
+
+
+        {
+            response_id: 108,
+            work_id: 5,
+            work_number: 5,
+            lang_id: 0,
+            name: "Розробка документообігу підприємства за видами діяльності",
+        },
+        {
+            response_id: 109,
+            work_id: 17,
+            work_number: 5,
+            lang_id: 1,
+            name: "Development of enterprise document flow by types of activities",
+        },
+        {
+            response_id: 110,
+            work_id: 29,
+            work_number: 5,
+            lang_id: 2,
+            name: "Разработка документооборота предприятия по видам деятельности",
+        },
+
+        {
+            response_id: 111,
+            work_id: 5,
+            work_number: 5,
+            lang_id: 0,
+            name: "Розробка програми зі складання планових та фактичних калькуляцій робіт",
+        },
+        {
+            response_id: 112,
+            work_id: 17,
+            work_number: 5,
+            lang_id: 1,
+            name: "Development of a program for drawing up planned and actual cost estimates for work",
+        },
+        {
+            response_id: 113,
+            work_id: 29,
+            work_number: 5,
+            lang_id: 2,
+            name: "Разработка программы по составлению плановых и фактических калькуляций работ",
+        },
+
+        {
+            response_id: 114,
+            work_id: 5,
+            work_number: 5,
+            lang_id: 0,
+            name: "Під час відрядження з 05/2002 до 09/2003 виконував обов'язки заступника директора з економіки ЗАТ «Харківський вагонобудівний завод»",
+        },
+        {
+            response_id: 115,
+            work_id: 17,
+            work_number: 5,
+            lang_id: 1,
+            name: "During my business trip from 05/2002 to 09/2003, I served as Deputy Director for Economics at Kharkiv Carriage Works CJSC.",
+        },
+        {
+            response_id: 116,
+            work_id: 29,
+            work_number: 5,
+            lang_id: 2,
+            name: "Во время командировки с 05/2002 по 09/2003 исполнял обязанности заместителя директора по экономике ЗАО «Харьковский вагоностроительный завод»",
+        },
+
+
+        {
+            response_id: 117,
+            work_id: 6,
+            work_number: 6,
+            lang_id: 0,
+            name: "Обслуговування та ремонт комп'ютерів та офісної техніки",
+        },
+        {
+            response_id: 118,
+            work_id: 18,
+            work_number: 6,
+            lang_id: 1,
+            name: "Maintenance and repair of computers and office equipment",
+        },
+        {
+            response_id: 119,
+            work_id: 30,
+            work_number: 6,
+            lang_id: 2,
+            name: "Обслуживание и ремонт компьютеров и офисной техники",
+        },
+
+        {
+            response_id: 120,
+            work_id: 6,
+            work_number: 6,
+            lang_id: 0,
+            name: "Налаштування та адміністрування комп'ютерної мережі",
+        },
+        {
+            response_id: 121,
+            work_id: 18,
+            work_number: 6,
+            lang_id: 1,
+            name: "Setting up and administering a computer network",
+        },
+        {
+            response_id: 122,
+            work_id: 30,
+            work_number: 6,
+            lang_id: 2,
+            name: "Настройка и администрирование компьютерной сети",
+        },
+
+        {
+            response_id: 123,
+            work_id: 6,
+            work_number: 6,
+            lang_id: 0,
+            name: "Навчання користувачів",
+        },
+        {
+            response_id: 124,
+            work_id: 18,
+            work_number: 6,
+            lang_id: 1,
+            name: "User training",
+        },
+        {
+            response_id: 125,
+            work_id: 30,
+            work_number: 6,
+            lang_id: 2,
+            name: "Обучение пользователей",
+        },
+
+        {
+            response_id: 126,
+            work_id: 6,
+            work_number: 6,
+            lang_id: 0,
+            name: "Отримання та встановлення оновлень для всіх програм підприємства",
+        },
+        {
+            response_id: 127,
+            work_id: 18,
+            work_number: 6,
+            lang_id: 1,
+            name: "Obtaining and installing updates for all enterprise programs",
+        },
+        {
+            response_id: 128,
+            work_id: 30,
+            work_number: 6,
+            lang_id: 2,
+            name: "Получение и установка обновлений для всех программ предприятия",
+        },
+
+        {
+            response_id: 129,
+            work_id: 6,
+            work_number: 6,
+            lang_id: 0,
+            name: "Розробка сайту підприємства",
+        },
+        {
+            response_id: 130,
+            work_id: 18,
+            work_number: 6,
+            lang_id: 1,
+            name: "Development of a company website",
+        },
+        {
+            response_id: 131,
+            work_id: 30,
+            work_number: 6,
+            lang_id: 2,
+            name: "Разработка сайта предприятия ",
+        },
+
+        {
+            response_id: 132,
+            work_id: 6,
+            work_number: 6,
+            lang_id: 0,
+            name: "Адміністрування сайту з веденням актуальної інформації на продукцію",
+        },
+        {
+            response_id: 133,
+            work_id: 18,
+            work_number: 6,
+            lang_id: 1,
+            name: "Website administration with up-to-date information on products",
+        },
+        {
+            response_id: 134,
+            work_id: 30,
+            work_number: 6,
+            lang_id: 2,
+            name: "Администрирование сайта с ведением актуальной информации на продукцию",
+        },
+
+
+        {
+            response_id: 135,
+            work_id: 7,
+            work_number: 7,
+            lang_id: 0,
+            name: "Системний адміністратор",
+        },
+        {
+            response_id: 136,
+            work_id: 19,
+            work_number: 7,
+            lang_id: 1,
+            name: "System administrator",
+        },
+        {
+            response_id: 137,
+            work_id: 31,
+            work_number: 7,
+            lang_id: 2,
+            name: "Системный администратор",
+        },
+
+        {
+            response_id: 138,
+            work_id: 7,
+            work_number: 7,
+            lang_id: 0,
+            name: "Навчання користувачів",
+        },
+        {
+            response_id: 139,
+            work_id: 19,
+            work_number: 7,
+            lang_id: 1,
+            name: "Training users",
+        },
+        {
+            response_id: 140,
+            work_id: 31,
+            work_number: 7,
+            lang_id: 2,
+            name: "Обучение пользователей",
+        },
+
+        {
+            response_id: 141,
+            work_id: 7,
+            work_number: 7,
+            lang_id: 0,
+            name: "Розробка програми з обліку діяльності",
+        },
+        {
+            response_id: 142,
+            work_id: 19,
+            work_number: 7,
+            lang_id: 1,
+            name: "Development of a program for accounting of activities",
+        },
+        {
+            response_id: 143,
+            work_id: 31,
+            work_number: 7,
+            lang_id: 2,
+            name: "Разработка программы по учету деятельности",
+        },
+
+
+        {
+            response_id: 144,
+            work_id: 8,
+            work_number: 8,
+            lang_id: 0,
+            name: "Відновлення бухгалтерського обліку у повному обсязі",
+        },
+        {
+            response_id: 145,
+            work_id: 20,
+            work_number: 8,
+            lang_id: 1,
+            name: "Restoration of accounting in full",
+        },
+        {
+            response_id: 146,
+            work_id: 32,
+            work_number: 8,
+            lang_id: 2,
+            name: "Восстановление бухгалтерского учета в полном объеме",
+        },
+
+        {
+            response_id: 147,
+            work_id: 8,
+            work_number: 8,
+            lang_id: 0,
+            name: "Ведення бухгалтерського обліку із застосуванням програми «Соло для бухгалтера з комп'ютером»",
+        },
+        {
+            response_id: 148,
+            work_id: 20,
+            work_number: 8,
+            lang_id: 1,
+            name: "Accounting using the program «Solo for an accountant with a computer»",
+        },
+        {
+            response_id: 149,
+            work_id: 32,
+            work_number: 8,
+            lang_id: 2,
+            name: "Ведение бухгалтерского учета с применением программы «Соло для бухгалтера с компьютером»",
+        },
+
+        {
+            response_id: 150,
+            work_id: 8,
+            work_number: 8,
+            lang_id: 0,
+            name: "Підготовка податкових та статистичних звітів",
+        },
+        {
+            response_id: 151,
+            work_id: 20,
+            work_number: 8,
+            lang_id: 1,
+            name: "Preparation of tax and statistical reports",
+        },
+        {
+            response_id: 152,
+            work_id: 32,
+            work_number: 8,
+            lang_id: 2,
+            name: "Подготовка налоговых и статистических отчетов",
+        },
+
+
+        {
+            response_id: 153,
+            work_id: 9,
+            work_number: 9,
+            lang_id: 0,
+            name: "Ведення бухгалтерського обліку у програмі «Target»",
+        },
+        {
+            response_id: 154,
+            work_id: 21,
+            work_number: 9,
+            lang_id: 1,
+            name: "Accounting in the program «Target»",
+        },
+        {
+            response_id: 155,
+            work_id: 33,
+            work_number: 9,
+            lang_id: 2,
+            name: "Ведение бухгалтерского учета в программе «Target»",
+        },
+
+        {
+            response_id: 156,
+            work_id: 9,
+            work_number: 9,
+            lang_id: 0,
+            name: "Ведення комп'ютеризованого кадрового обліку підприємства",
+        },
+        {
+            response_id: 157,
+            work_id: 21,
+            work_number: 9,
+            lang_id: 1,
+            name: "Maintaining computerized personnel records of the enterprise",
+        },
+        {
+            response_id: 158,
+            work_id: 33,
+            work_number: 9,
+            lang_id: 2,
+            name: "Ведение компьютеризированного кадрового учета предприятия",
+        },
+
+        {
+            response_id: 159,
+            work_id: 9,
+            work_number: 9,
+            lang_id: 0,
+            name: "Розрахунок заробітної плати та підготовка звітів",
+        },
+        {
+            response_id: 160,
+            work_id: 21,
+            work_number: 9,
+            lang_id: 1,
+            name: "Payroll calculation and reporting",
+        },
+        {
+            response_id: 161,
+            work_id: 33,
+            work_number: 9,
+            lang_id: 2,
+            name: "Расчет заработной платы и подготовка отчетов",
+        },
+
+
+        {
+            response_id: 162,
+            work_id: 10,
+            work_number: 10,
+            lang_id: 0,
+            name: "Обслуговування та ремонт обчислювальної техніки інституту",
+        },
+        {
+            response_id: 163,
+            work_id: 22,
+            work_number: 10,
+            lang_id: 1,
+            name: "Maintenance and repair of the Institute's computing equipment",
+        },
+        {
+            response_id: 164,
+            work_id: 34,
+            work_number: 10,
+            lang_id: 2,
+            name: "Обслуживание и ремонт вычислительной техники института",
+        },
+
+        {
+            response_id: 165,
+            work_id: 10,
+            work_number: 10,
+            lang_id: 0,
+            name: "Програмування завдань проектування",
+        },
+        {
+            response_id: 166,
+            work_id: 22,
+            work_number: 10,
+            lang_id: 1,
+            name: "Programming design tasks",
+        },
+        {
+            response_id: 167,
+            work_id: 34,
+            work_number: 10,
+            lang_id: 2,
+            name: "Программирование задач проектирования",
+        },
+
+        {
+            response_id: 168,
+            work_id: 10,
+            work_number: 10,
+            lang_id: 0,
+            name: "Навчання персоналу роботі з комп'ютером, операційною системою та програмами",
+        },
+        {
+            response_id: 169,
+            work_id: 22,
+            work_number: 10,
+            lang_id: 1,
+            name: "Training staff to work with computers, operating systems and programs",
+        },
+        {
+            response_id: 170,
+            work_id: 34,
+            work_number: 10,
+            lang_id: 2,
+            name: "Обучение персонала работе с компьютером, операционной системой и программами",
+        },
+
+
+        {
+            response_id: 171,
+            work_id: 11,
+            work_number: 11,
+            lang_id: 0,
+            name: "Створення програм для вирішення прикладних завдань з прокатки та волочіння",
+        },
+        {
+            response_id: 172,
+            work_id: 23,
+            work_number: 11,
+            lang_id: 1,
+            name: "Creation of programs for solving applied problems in rolling and drawing",
+        },
+        {
+            response_id: 173,
+            work_id: 35,
+            work_number: 11,
+            lang_id: 2,
+            name: "Создание программ для решения прикладных задач по прокатке и волочению ",
+        },
+       
+    ],
+
+  
+
+};

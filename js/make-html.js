@@ -3,23 +3,36 @@
 /* Формирование динамического кода страницы из структур в зависимости от */
 
 /* Импортирование всего контента из файла в одну структуру */
-import langdb from '../data/lang-db.js';
-import detailsdb from '../data/db-details.js';
+import dbLang from '../data/db-lang.js';
+/* Импортирование Обязанностей из файла в структуру */
+import dbResponses from '../data/db-responses.js';
+/* Импортирование Достижений из файла в структуру */
+import dbAchieves from '../data/db-achieves.js';
 
 /* Деструктуризация информации - в массивы структур данных */
-const { langs, contents, techskills, softskills, langskills, projects, additions, educations, works } = langdb;
-const { responses, achieves } = detailsdb;
+const { langs, contents, techskills, softskills, langskills, projects, additions, educations, works } = dbLang;
+const { responses } = dbResponses;
+const { achieves } = dbAchieves;
 
-console.log('maincontent[0].myname', contents[0].myname);
-console.log('maincontent[1].myname', contents[1].myname);
-console.log('softskill[2].name', softskills[2].name);
-console.log('techskill[2].name', techskills[2].name);
 
 /* Установка текущего языка */
 let currentLang = 0;
 
 /* Вызов функции изменения текстового контента в зависимости от текущего языка */
 changeLang(currentLang);
+
+/* ==================================================== */
+/* Поиск объекта - кнопка - Печать */
+const printBtn = document.querySelector('.print-btn');
+
+/* Добавляем "слушателя событий" на кнопку - Печать */
+printBtn.addEventListener('click', onPrintBtnClick);
+
+/* Функция - хендлер (при клике на кнопку Печать) */
+function onPrintBtnClick(event) { 
+    window.print();
+};
+/* ==================================================== */
 
 /* Поиск объекта - меню с кнопками выбора языков */
 const langMenu = document.querySelector('.lang-menu');
@@ -80,22 +93,18 @@ function onMenuLangClick(event) {
     const sectionAdditionsEl = document.querySelector('.section.additions');
     sectionAdditionsEl.remove();
 
-    // const sectionIntroduceEl = document.querySelector('.section.introduce');
-    // sectionIntroduceEl.remove();
 
-    // const sectionEducationEl = document.querySelector('.section.educations');
-    // sectionEducationEl.remove();
 
     /* Поиск всех элементов с образованиями в списке*/
     const itemEduEls = document.querySelectorAll('.item.education');
-    /* Удаление всех єлементов li class="item work" */
+    /* Удаление всех элементов li class="item education" */
     for (const element of itemEduEls) {
         element.remove();
     }    
 
     /* Поиск всех элементов с работами в списке*/
     const itemWorkEls = document.querySelectorAll('.item.work');
-    /* Удаление всех єлементов li class="item work" */
+    /* Удаление всех элементов li class="item work" */
     for (const element of itemWorkEls) {
         element.remove();
     }
@@ -148,7 +157,7 @@ function changeLang(newCurrentLang) {
     console.log('achievesLang', achievesLang);
 
     /* Деструктуризация основного контента в переменные из массива структуры текущего языка */
-    const { lang_id, headtitle, myposition, myname, photoalt, phototitle,
+    const { lang_id, headtitle, myposition, myname, photoalt, printtitle,
         contactstitle, techtitle, softtitle, langtitle, projectstitle, addstitle,
         introtitle, introtext, edutitle, workstitle, responsetitle, achievetitle } = contentsLang[0];
 
@@ -211,13 +220,21 @@ function changeLang(newCurrentLang) {
     /* ============================================================================ */
 
     /* ============================================================================ */
-    /* Изменяем - Атрибуты alt & title для фотографии */
+    /* Изменяем - Атрибут alt для фотографии */
     /* ---------------------------------------------------------------------------- */
     /* Ищем элемент с тегом img - саму фотографию  */
     const photoEl = document.querySelector('.section .photo');
     /* Изменяем значения атрибутов в зависимости от языка */
     photoEl.setAttribute('alt', `${photoalt}`);
-    photoEl.setAttribute('title', `${phototitle}`);
+    /* ============================================================================ */
+
+    /* ============================================================================ */
+    /* Изменяем - Атрибут  title для кнопки - Печать */
+    /* ---------------------------------------------------------------------------- */
+    /* Ищем элемент с тегом img - саму фотографию  */
+    const printBtnEl = document.querySelector('.print-btn');
+    /* Изменяем значения атрибутов в зависимости от языка */
+    printBtnEl.setAttribute('title', `${printtitle}`);
     /* ============================================================================ */
 
     /* ============================================================================ */
@@ -468,11 +485,14 @@ function changeLang(newCurrentLang) {
                 </div>
                 <div class="details"> `;
 
-        
-        if (work.show_response) {
+        /* ------------------------------------------------------------------------------------------------ */
+        /* Обязанности */
+        /* Фильтрация по работе (work_id или work_number) */
+        const responsesLangWork = responsesLang.filter(response => response.work_number === work.work_number);
+
+        /* Если есть отметка о показе обязанностей и есть сами обязанности в списке */
+        if (work.show_response && responsesLangWork.length>0 ) {
             let itemList = ``;
-            /* Фильтрация по работе (work_id или work_number) */
-            const responsesLangWork = responsesLang.filter(response => response.work_number === work.work_number);
             
             for (const response of responsesLangWork) {
                 itemList = itemList + `<li class="response-item text-small">${response.name}</li>`;
@@ -485,11 +505,15 @@ function changeLang(newCurrentLang) {
                     `   </ul>
                     </div> `;
         };
+        /* ------------------------------------------------------------------------------------------------ */
 
-        if (work.show_achieve) {
+        /* ------------------------------------------------------------------------------------------------ */
+        /* Достижения */
+        /* Фильтрация по работе (work_id или work_number) */
+        const achievesLangWork = achievesLang.filter(achieve => achieve.work_number === work.work_number);
+        /* Если есть отметка о показе достижений и есть сами Достижения в списке */
+        if (work.show_achieve && achievesLangWork.length>0) {
             let itemList = ``;
-            /* Фильтрация по работе (work_id или work_number) */
-            const achievesLangWork = achievesLang.filter(achieve => achieve.work_number === work.work_number);
             
             for (const achieve of achievesLangWork) {
                 itemList = itemList + `<li class="achieve-item text-small">${achieve.name}</li>`;
@@ -502,7 +526,7 @@ function changeLang(newCurrentLang) {
                     `   </ul>
                     </div> `;
         };
-
+        /* ------------------------------------------------------------------------------------------------ */
         
         item = item +
             `   </div>

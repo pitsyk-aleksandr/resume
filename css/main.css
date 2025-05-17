@@ -71,7 +71,7 @@
 }
 
 /* Шаблон, который ограничивает контент размером сетки и устанавливает отступы */
-.main-content, header {
+footer, .main-content, header {
   /* Внутренние отступы для блока */
   padding-top: 0px;
   padding-right: 12px;
@@ -90,14 +90,21 @@
   /* Установка для промежутка между мобильной версией и планшетом */
   /*===============================================*/
   /* Установка для размера - больше планшета */
+  /*===============================================*/
 }
 @media screen and (min-width: 480px) {
-  .main-content, header {
+  footer, .main-content, header {
     width: 480px;
   }
 }
 @media screen and (min-width: 768px) {
-  .main-content, header {
+  footer, .main-content, header {
+    max-width: none;
+    width: 100%;
+  }
+}
+@media print {
+  footer, .main-content, header {
     max-width: none;
     width: 100%;
   }
@@ -274,6 +281,7 @@ header {
   /* Для мобильного версии */
   /* Меню кнопок выбора языка*/
   /* Для мобильного версии */
+  /* Для печатной версии - заголовок - не фиксирован */
 }
 .page-header .title-main {
   display: -webkit-box;
@@ -301,6 +309,15 @@ header {
   /* Установка для размера - больше планшета */
 }
 @media screen and (min-width: 768px) {
+  .page-header .title-main {
+    /* Установка всех элементов в строку */
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+@media print {
   .page-header .title-main {
     /* Установка всех элементов в строку */
     -webkit-box-orient: horizontal;
@@ -349,6 +366,21 @@ header {
             flex-direction: row;
   }
 }
+@media print {
+  .page-header .lang-menu {
+    /* Установка всех элементов в строку */
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+@media print {
+  .page-header {
+    position: relative;
+    background-color: white;
+  }
+}
 
 .lang-btn {
   display: -webkit-inline-box;
@@ -394,10 +426,19 @@ header {
   /* Установка для промежутка между мобильной версией и планшетом */
   /*===============================================*/
   /* Установка для размера - больше планшета */
+  /* Для печатной версии - Установка side-left / side-right всех элементов в строку */
 }
 @media screen and (min-width: 768px) {
   .main-content {
     /* Установка всех элементов в строку */
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+@media print {
+  .main-content {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -428,6 +469,12 @@ header {
   .side-left {
     /* Ширина блока */
     max-width: 400px;
+  }
+}
+@media print {
+  .side-left {
+    /* Установка ширины элемента - 40 % общей ширины */
+    width: 40%;
   }
 }
 
@@ -499,6 +546,12 @@ header {
     display: inline-flex;
   }
 }
+@media print {
+  .section {
+    /* Изменение цвета фона */
+    background-color: #FEEFD6;
+  }
+}
 
 /* Заголовок секции */
 .text-title-section,
@@ -557,6 +610,12 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+@media print {
+  .item {
+    /* Изменение цвета фона */
+    background-color: white;
+  }
 }
 
 .contacts .item {
@@ -714,7 +773,7 @@ header {
 }
 .details .list.response {
   /* Шаблон для немаркированного списка */
-  padding: 4px;
+  padding: 8px 4px;
   /* Верхняя граница - линия */
   border-top: 1px solid #0D0D0D;
   width: 100%;
@@ -723,10 +782,93 @@ header {
 }
 .details .list.achieve {
   /* Шаблон для немаркированного списка */
-  padding: 4px;
+  padding: 8px 4px;
   /* Верхняя граница - линия */
   border-top: 1px solid #0D0D0D;
   width: 100%;
   list-style: circle;
   padding-left: 16px;
+}
+
+footer {
+  /* Шаблон, который ограничивает контент размером сетки и устанавливает отступы */
+}
+
+.page-footer {
+  /* Для мобильной версии - кнопка не высвечивается*/
+  display: none;
+  /* Установка для размера - больше планшета */
+}
+@media print {
+  .page-footer {
+    /* При печати - кнопка не высвечивается*/
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) {
+  .page-footer {
+    display: block;
+    position: relative;
+    padding: 8px 12px 8px 12px;
+    /* Ширина блока - 100% ширины container */
+    width: 100%;
+    /* Цвет фона*/
+    background-color: #FEEFD6;
+  }
+}
+
+/* Кнопка - Печать */
+.print-btn {
+  /* Кнопка - активна */
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  /* =========================================== */
+  /* Блок стилей контент кнопки - фоновая иконка */
+  width: 52px;
+  height: 40px;
+  background-image: url("../../icon/printer.svg");
+  background-repeat: no-repeat;
+  background-size: 24px 24px;
+  background-position: center;
+  /* =========================================== */
+  border-radius: 8px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #0D0D0D;
+  background-color: #D2E1D8;
+  /* Вид курсора над кнопкой */
+  cursor: pointer;
+}
+.print-btn:hover, .print-btn:focus {
+  background-color: #8FDCDE;
+}
+
+/* Стили при печати на принтере - для всех объектов */
+/* Стили, которые будут использоваться при печати на принтер */
+/* Установка размера страницы при печати*/
+@page {
+  size: A4;
+  margin: 10%;
+}
+/* Для печатной версии - уменьшение масштаба */
+/* Установка настроек при печати */
+@media print {
+  body {
+    /* Убираем верхний отступ, которій делается на сайте для фиксированного page-header*/
+    padding-top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    /* Печать фона при печати на принтере*/
+    -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+  }
+  button {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
 }/*# sourceMappingURL=main.css.map */

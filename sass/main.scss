@@ -18,4 +18,8 @@
 /* Компоненты */
 @import "components/page-header";
 @import "components/section";
+@import "components/page-footer";
 // @import "components/form-modal";
+
+/* Стили при печати на принтере - для всех объектов */
+@import "print";

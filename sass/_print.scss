@@ -1,0 +1,38 @@
+/* Стили, которые будут использоваться при печати на принтер */ 
+
+/* Установка размера страницы при печати*/
+@page {
+    size: A4;
+    margin: 10%;
+};
+/* Для печатной версии - уменьшение масштаба */
+// @media print { scale: 50%; };
+    
+
+/* Установка настроек при печати */
+@media print {
+    body {
+
+        /* Убираем верхний отступ, которій делается на сайте для фиксированного page-header*/
+        padding-top: 0;
+        
+        width: 100%;
+        height: 100%;
+        // Цвет фона при печати - белый
+        background-color: white;
+
+        /* Печать фона при печати на принтере*/
+        // -webkit-print-color-adjust: exact !important;
+        // color-adjust: exact !important;
+        print-color-adjust: exact;
+
+    };
+
+    button {
+        // Убрать тени от кнопок
+        box-shadow: none;
+    };
+
+
+
+};

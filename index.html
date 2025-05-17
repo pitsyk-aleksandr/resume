@@ -41,6 +41,7 @@
     <!-- <link rel="stylesheet" href="./css/resume.css" /> -->
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
+
   <body>
     <!-- Заголовок -->
     <header>
@@ -570,7 +571,11 @@
     </main>
 
     <!-- Футер - подвал сайта -->
-    <footer class="page-footer"></footer>
+    <footer>
+      <div class="page-footer">
+        <button type="button" class="print-btn"></button>
+      </div>
+    </footer>
 
     <!-- Подключение JS - Ставим перед закрывающим тегом body -->
 
@@ -592,6 +597,18 @@
       document.body.style.paddingTop = `${pageHeaderHeight}px`;
       // document.body.style.paddingBottom = `12px`;
     </script>
+
+    <!-- Ссылка на печать и Скрипт печати страницы  -->
+    <!-- <a href="#" class="action-print">Распечатать</a> -->
+
+    <!-- <script>
+      $(function($){
+	      $(".action-print").click(function(){
+		      window.print();
+		      return false;
+	      });
+      });
+    </script> -->
 
     <!-- Установка ширины блока моего имени class="section my-name" по ширине "side-left" -->
     <!-- <script>

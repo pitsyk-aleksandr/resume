@@ -1,0 +1,80 @@
+// Настройки для footer
+footer {
+        /* Шаблон, который ограничивает контент размером сетки и устанавливает отступы */
+        @extend %container;
+};
+
+.page-footer {
+
+    /* Для мобильной версии - кнопка не высвечивается*/
+    display: none;
+        
+    @media print {
+        /* При печати - кнопка не высвечивается*/
+        display: none;
+    };
+        
+    /* Установка для размера - больше планшета */
+    @media screen and (min-width:$tablet) {
+        display: block;
+        position: relative;
+        // Внутренние отступы 
+        // сверху и снизу = 8px, справа и слева = 12px
+        padding: 8px 12px 8px 12px;
+
+        /* Ширина блока - 100% ширины container */
+        width: 100%;
+
+        /* Цвет фона*/
+        background-color: $color-bg-main;
+    };
+};
+
+/* Кнопка - Печать */
+.print-btn {
+
+            /* Кнопка - активна */
+            display: inline-flex;
+
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        
+            /* =========================================== */
+            /* Блок стилей контент кнопки - фоновая иконка */
+            width: 52px;
+            height: 40px;
+        
+            background-image: url('../../icon/printer.svg');
+            background-repeat: no-repeat;
+            background-size: 24px 24px;
+            background-position: center;
+        
+            /* =========================================== */
+        
+        
+        
+            // Радиус скругления кнопки
+            border-radius: 8px;
+            // Стиль обводки кнопки - одинарная линия
+            border-style: solid;
+            border-width: 1px;
+            // Обводка кнопки - цвет основного фона
+            border-color: $color-black;
+        
+            // Цвет кнопки
+            background-color: $color-bg-section;
+        
+            /* Вид курсора над кнопкой */
+            cursor: pointer;
+        
+        
+            // Изменения при наведении мыши или фокусе
+            &:hover,
+            &:focus {
+                // Цвет кнопки
+                background-color: $color-bg-part;
+        
+            };
+
+}

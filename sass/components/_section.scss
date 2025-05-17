@@ -32,7 +32,11 @@
             /* Установка всех элементов в строку */
             flex-direction: row;
         }
-
+    
+        /* Для печатной версии - Установка side-left / side-right всех элементов в строку */
+        @media print {
+            flex-direction: row;
+        };
 }
 
 .side-left {
@@ -56,7 +60,12 @@
         @media screen and (min-width:$tablet) {
             /* Ширина блока */
             max-width: 400px;
-        }
+        };
+
+    @media print {
+        /* Установка ширины элемента - 40 % общей ширины */
+        width: 40%;
+    };
 }
 
 
@@ -129,6 +138,11 @@
                 display: inline-flex;
             }
     }
+
+    @media print {
+        /* Изменение цвета фона */
+        background-color: $color-bg-main;
+    }
 }
 
 
@@ -185,6 +199,11 @@
 
     /* Выравнивание всех элементов контейнера по второстепенной оси - по центру */
     align-items: center;
+
+    @media print {
+            /* Изменение цвета фона */
+            background-color: white;
+    }
 
 
 }
@@ -281,10 +300,11 @@
     /* Блок стилей контент кнопки - фоновая иконка */
     width: 24px;
     height: 24px;
-        background-image: url('../icon/arrow-down.svg');
-            background-repeat: no-repeat;
-            background-size: 14px 14px;
-            background-position: center;
+
+    background-image: url('../icon/arrow-down.svg');
+    background-repeat: no-repeat;
+    background-size: 14px 14px;
+    background-position: center;
 
     /* =========================================== */
 
@@ -352,7 +372,7 @@
     };
 }
 
-// В обычном сосоянии подробности (опыта работы) не показываются
+// В обычном состоянии подробности (опыта работы) не показываются
 .details {
     /* В пормальном состоянии - Подробности скрыты*/
     display: none;
@@ -372,12 +392,12 @@
         /* Шаблон для немаркированного списка */
         @extend %list;
 
-        padding: 4px;
+        padding: 8px 4px;
         /* Верхняя граница - линия */
         border-top: 1px solid $color-black;
         width: 100%;
 
-        list-style:circle ;
+        list-style: circle ;
         padding-left: 16px;
     }
 
@@ -386,12 +406,12 @@
         /* Шаблон для немаркированного списка */
         @extend %list;
         
-        padding: 4px;
+        padding: 8px 4px;
         /* Верхняя граница - линия */
         border-top: 1px solid $color-black;
         width: 100%;
 
-        list-style: circle;
+        list-style: circle ;
         padding-left: 16px;
     }
 }
