@@ -375,6 +375,8 @@ function changeLang(newCurrentLang) {
 
     /* section - additions */
     /* Секция - Дополнительная информация */
+
+    /* СЕКЦИЯ - НЕ ФОРМИРУЕТСЯ - закомментирована !!! */
                
     list = ``;
     for (const addition of additionsLang) {
