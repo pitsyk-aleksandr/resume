@@ -49,25 +49,25 @@
         <div class="title-main">
           <!-- Секция Фамилия и Имя -->
           <section class="section my-name">
-            <h2 id="my-name" class="text-title-main">Пицык Александр</h2>
+            <h2 id="my-name" class="text-title-main">Піцик Олександр</h2>
           </section>
 
           <!-- Секция Моя Возможная должность -->
           <section class="section my-position">
-            <h1 id="my-position" class="text-title-main">Full-Stack Developer</h1>
+            <h1 id="my-position" class="text-title-main">Junior FrontEnd Developer</h1>
           </section>
         </div>
 
         <ul class="section lang-menu">
           <li class="lang-item">
             <!-- <button type="button" data-lang="ua" class="lang-btn text-btn">UA</button> -->
-            <button type="button" data-lang="0" class="lang-btn text-btn">UA</button>
+            <button type="button" data-lang="0" class="lang-btn text-btn current">UA</button>
           </li>
           <li class="lang-item">
             <button type="button" data-lang="1" class="lang-btn text-btn">EN</button>
           </li>
           <li class="lang-item">
-            <button type="button" data-lang="2" class="lang-btn text-btn current">RU</button>
+            <button type="button" data-lang="2" class="lang-btn text-btn">RU</button>
           </li>
         </ul>
       </div>
@@ -80,24 +80,32 @@
         <div class="side-left">
           <!-- Фотография -->
           <section class="section photo">
-            <img src="./image/my-photo.jpg" alt="Фотография" title="Фотография" class="photo" />
+            <img src="./image/my-photo.jpg" alt="Фотографія" title="Фотографія" class="photo" />
           </section>
 
           <!-- Секция КОНТАКТЫ -->
           <section class="section contacts">
-            <h3 id="contacts-title" class="text-title-section">Контакты</h3>
+            <h3 id="contacts-title" class="text-title-section">Контакти</h3>
             <ul class="list">
               <li class="item">
                 <svg width="20" height="20" class="email icon">
-                  <use href="./icon/icons.svg#icon-envelop"></use>
+                  <use href="./icon/icons.svg#icon-email"></use>
                 </svg>
                 <p class="email text-big">pitsyk.a@gmail.com</p>
                 <!-- <a href="mailto:pitsyk.a@gmail.com" title="Напиши" class="email text-big"
                   >pitsyk.a@gmail.com</a
                 > -->
               </li>
+
               <li class="item">
-                <svg width="20" height="20" class="phone icon">
+                <svg width="20" height="20" class="telegram icon">
+                  <use href="./icon/icons.svg#icon-telegram"></use>
+                </svg>
+                <p class="telegram text-big">@SanUkraine</p>
+              </li>
+
+              <li class="item">
+                <svg width="16" height="16" class="phone icon">
                   <use href="./icon/icons.svg#icon-phone"></use>
                 </svg>
                 <p class="phone text-big">+38 067 635 17 28</p>
@@ -110,119 +118,148 @@
 
           <!-- Секция ТЕХНИЧЕСКИЕ НАВЫКИ -->
           <!-- <section class="section tech-skills">
-            <h3 id="tech-title" class="text-title-section">Технические навыки</h3>
-            <ul class="list">
-              <li class="item">
-                <p class="text-big">Microsoft Word</p>
-                <div class="levels level-4">
-                  <div class="level one"></div>
-                  <div class="level two"></div>
-                  <div class="level three"></div>
-                  <div class="level four"></div>
-                  <div class="level five"></div>
-                </div>
-              </li>
-              <li class="item">
-                <p class="text-big">Microsoft Excel</p>
-                <div class="levels level-4">
-                  <div class="level one"></div>
-                  <div class="level two"></div>
-                  <div class="level three"></div>
-                  <div class="level four"></div>
-                  <div class="level five"></div>
-                </div>
-              </li>
-              <li class="item">
-                <p class="text-big">Figma</p>
-                <div class="levels level-3">
-                  <div class="level one"></div>
-                  <div class="level two"></div>
-                  <div class="level three"></div>
-                  <div class="level four"></div>
-                  <div class="level five"></div>
-                </div>
-              </li>
-              <li class="item">
-                <p class="text-big">HTML</p>
-                <div class="levels level-3">
-                  <div class="level one"></div>
-                  <div class="level two"></div>
-                  <div class="level three"></div>
-                  <div class="level four"></div>
-                  <div class="level five"></div>
-                </div>
-              </li>
-              <li class="item">
-                <p class="text-big">CSS</p>
-                <div class="levels level-3">
-                  <div class="level one"></div>
-                  <div class="level two"></div>
-                  <div class="level three"></div>
-                  <div class="level four"></div>
-                  <div class="level five"></div>
-                </div>
-              </li>
-              <li class="item">
-                <p class="text-big">MySQL</p>
-                <div class="levels level-2">
-                  <div class="level one"></div>
-                  <div class="level two"></div>
-                  <div class="level three"></div>
-                  <div class="level four"></div>
-                  <div class="level five"></div>
-                </div>
-              </li>
-              <li class="item">
-                <p class="text-big">GitHub</p>
-                <div class="levels level-2">
-                  <div class="level one"></div>
-                  <div class="level two"></div>
-                  <div class="level three"></div>
-                  <div class="level four"></div>
-                  <div class="level five"></div>
-                </div>
-              </li>
-              <li class="item">
-                <p class="text-big">Golang</p>
-                <div class="levels level-2">
-                  <div class="level one"></div>
-                  <div class="level two"></div>
-                  <div class="level three"></div>
-                  <div class="level four"></div>
-                  <div class="level five"></div>
-                </div>
-              </li>
-            </ul>
-          </section> -->
+            <h3 id="tech-title" class="text-title-section">Технічні навички</h3>
+            <div class="subsection">
+              <h4 class="text-title-subsection">Frontend</h4>
+              <ul class="list">
+                <li class="item">
+                  <p class="text-big">Figma</p>
+                  <div class="levels level-3">
+                    <div class="level one"></div>
+                    <div class="level two"></div>
+                    <div class="level three"></div>
+                    <div class="level four"></div>
+                    <div class="level five"></div>
+                  </div>
+                </li>
+                <li class="item">
+                  <p class="text-big">HTML5</p>
+                  <div class="levels level-3">
+                    <div class="level one"></div>
+                    <div class="level two"></div>
+                    <div class="level three"></div>
+                    <div class="level four"></div>
+                    <div class="level five"></div>
+                  </div>
+                </li>
+                <li class="item">
+                  <p class="text-big">CSS3</p>
+                  <div class="levels level-3">
+                    <div class="level one"></div>
+                    <div class="level two"></div>
+                    <div class="level three"></div>
+                    <div class="level four"></div>
+                    <div class="level five"></div>
+                  </div>
+                </li>
+                <li class="item">
+                  <p class="text-big">SCSS</p>
+                  <div class="levels level-3">
+                    <div class="level one"></div>
+                    <div class="level two"></div>
+                    <div class="level three"></div>
+                    <div class="level four"></div>
+                    <div class="level five"></div>
+                  </div>
+                </li>
+                <li class="item">
+                  <p class="text-big">Flexbox</p>
+                  <div class="levels level-3">
+                    <div class="level one"></div>
+                    <div class="level two"></div>
+                    <div class="level three"></div>
+                    <div class="level four"></div>
+                    <div class="level five"></div>
+                  </div>
+                </li>
+                <li class="item">
+                  <p class="text-big">Grid</p>
+                  <div class="levels level-3">
+                    <div class="level one"></div>
+                    <div class="level two"></div>
+                    <div class="level three"></div>
+                    <div class="level four"></div>
+                    <div class="level five"></div>
+                  </div>
+                </li>
+                <li class="item">
+                  <p class="text-big">Responsive design</p>
+                  <div class="levels level-3">
+                    <div class="level one"></div>
+                    <div class="level two"></div>
+                    <div class="level three"></div>
+                    <div class="level four"></div>
+                    <div class="level five"></div>
+                  </div>
+                </li>
+                <li class="item">
+                  <p class="text-big">JavaScript</p>
+                  <div class="levels level-3">
+                    <div class="level one"></div>
+                    <div class="level two"></div>
+                    <div class="level three"></div>
+                    <div class="level four"></div>
+                    <div class="level five"></div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="subsection">
+              <h4 class="text-title-subsection">Backend</h4>
+              <ul class="list">
+                <li class="item">
+                  <p class="text-big">MySQL</p>
+                  <div class="levels level-2">
+                    <div class="level one"></div>
+                    <div class="level two"></div>
+                    <div class="level three"></div>
+                    <div class="level four"></div>
+                    <div class="level five"></div>
+                  </div>
+                </li>
 
-          <!-- Секция ЛИЧНЫЕ КАЧЕСТВА -->
-          <!-- <section class="section soft-skills">
-            <h3 id="soft-title" class="text-title-section">Личные качества</h3>
-            <ul class="list">
-              <li class="item">
-                <p id="soft-1" class="text-big">Системное мышление</p>
-              </li>
-              <li class="item">
-                <p id="soft-2" class="text-big">Эмоциональный интеллект</p>
-              </li>
-              <li class="item">
-                <p id="soft-3" class="text-big">Адаптивность и гибкость</p>
-              </li>
-              <li class="item">
-                <p id="soft-4" class="text-big">Стрессоустойчивость</p>
-              </li>
-              <li class="item">
-                <p id="soft-5" class="text-big">Позитивность и оптимизм</p>
-              </li>
-              <li class="item">
-                <p id="soft-6" class="text-big">Коммуникабельность</p>
-              </li>
-            </ul>
+                <li class="item">
+                  <p class="text-big">Golang</p>
+                  <div class="levels level-2">
+                    <div class="level one"></div>
+                    <div class="level two"></div>
+                    <div class="level three"></div>
+                    <div class="level four"></div>
+                    <div class="level five"></div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="subsection">
+              <h4 class="text-title-subsection">Tools</h4>
+              <ul class="list">
+                <li class="item">
+                  <p class="text-big">VS Code</p>
+                  <div class="levels level-3">
+                    <div class="level one"></div>
+                    <div class="level two"></div>
+                    <div class="level three"></div>
+                    <div class="level four"></div>
+                    <div class="level five"></div>
+                  </div>
+                </li>
+                <li class="item">
+                  <p class="text-big">GitHub</p>
+                  <div class="levels level-2">
+                    <div class="level one"></div>
+                    <div class="level two"></div>
+                    <div class="level three"></div>
+                    <div class="level four"></div>
+                    <div class="level five"></div>
+                  </div>
+                </li>
+              </ul>
+            </div>
           </section> -->
 
           <!-- Секция ЗНАНИЕ ЯЗЫКОВ -->
           <!-- <section class="section lang-skills">
-            <h3 id="lang-title" class="text-title-section">Знание языков</h3>
+            <h3 id="lang-title" class="text-title-section">Володіння мовами</h3>
             <ul class="list">
               <li class="item">
                 <p id="lang-1" class="text-big">Украинский</p>
@@ -257,35 +294,37 @@
             </ul>
           </section> -->
 
-          <!-- Секция ПРОЕКТЫ -->
-          <!-- <section class="section projects">
-            <h3 id="projects-title" class="text-title-section">Проекты - примеры</h3>
-
+          <!-- Секция ЛИЧНЫЕ КАЧЕСТВА -->
+          <!-- <section class="section soft-skills">
+            <h3 id="soft-title" class="text-title-section">Особисті якості</h3>
             <ul class="list">
               <li class="item">
-                <p id="project-1" class="text-small">Резюме - Figma</p>
-                <a
-                  href="https://www.figma.com/design/tIg0O0TskDivlzifTRJWrC/Resume?node-id=33-3&m=dev&t=jxvGN6VCn17YcarV-1"
-                  target="_blank"
-                  class="link text-small"
-                  >https://www.figma.com/design/...</a
-                >
+                <p id="soft-1" class="text-big">Системное мышление</p>
               </li>
               <li class="item">
-                <p id="project-2" class="text-small">Резюме - HTML + CSS + JavaScript</p>
-                <a
-                  href="https://github.com/pitsyk-aleksandr/resume"
-                  target="_blank"
-                  class="link text-small"
-                  >https://github.com/.../resume</a
-                >
+                <p id="soft-2" class="text-big">Эмоциональный интеллект</p>
+              </li>
+              <li class="item">
+                <p id="soft-2" class="text-big">Быстрая обучаемость></p>
+              </li>
+              <li class="item">
+                <p id="soft-3" class="text-big">Адаптивность и гибкость</p>
+              </li>
+              <li class="item">
+                <p id="soft-4" class="text-big">Стрессоустойчивость</p>
+              </li>
+              <li class="item">
+                <p id="soft-5" class="text-big">Позитивность и оптимизм</p>
+              </li>
+              <li class="item">
+                <p id="soft-6" class="text-big">Коммуникабельность</p>
               </li>
             </ul>
           </section> -->
 
           <!-- Секция Дополнительная информация -->
           <!-- <section class="section additions">
-            <h3 id="additions-title" class="text-title-section">Дополнительная информация</h3>
+            <h3 id="additions-title" class="text-title-section">Додаткова інформація</h3>
             <ul class="list">
               <li class="item">
                 <p id="addition-1" class="text-small">Готовность к командировкам</p>
@@ -301,38 +340,39 @@
         <div class="side-right">
           <!-- Секция ПРЕДСТАВЛЕНИЕ - коротко обо мне -->
           <section class="section introduce">
-            <h3 id="intro-title" class="text-title-section">Обо мне</h3>
+            <h3 id="intro-title" class="text-title-section">Про мене</h3>
             <p id="intro-text" class="item text-small">
-              В молодости очень активно занимался программированием. <br />
-              Был участником студенческих республиканских олимпиад по программированию. <br />
-              В 90-е годы работал инженером-программистом. <br />
-              В настоящее время есть время, вдохновение и желание вернуться к любимому делу. <br />
-              С удовольствием изучаю и окунаюсь в сферу современного IT. <br />
-              Подключусь к выполнению реальных проектов, как индивидуально, так и в состав
-              существующей команды. <br />
-              Ищу дистанционную работу, позволяющую оптимизировать личный тайминг.
+              У моєму бекграунді – досвід роботи програмістом, а також значний управлінський та
+              інженерний досвід, що дозволяє мені системно підходити до вирішення технічних завдань.
+              На даний час вивчаю сучасні веб-технології: HTML5, CSS3, JavaScript, DOM, адаптивну
+              верстку. Шукаю можливість застосовувати знання у реальних завданнях. Готовий працювати
+              віддалено, розвиватися в команді та вирішувати бізнес-проблеми через код.
             </p>
           </section>
 
-          <!-- Секция ОБРАЗОВАНИЕ -->
-          <section class="section educations">
-            <h3 id="edu-title" class="text-title-section">Образование</h3>
-            <ul class="list educations">
-              <!-- <li class="item education">
-                <p id="edu-1-position" class="text-big">Инженер-металлург</p>
-                <div class="firm-town">
-                  <p id="edu-1-firm" class="text-medium">ДИИ - Индустриальный институт</p>
-                  <p id="edu-1-town" class="text-small">г.Каменское</p>
-                </div>
-                <p id="edu-1-period" class="text-small">Сентябрь 1984 - Июнь 1991</p>
+          <!-- Секция ПРОЕКТЫ -->
+          <section class="section projects">
+            <h3 id="projects-title" class="text-title-section">Проекти – приклади</h3>
+            <ul class="list projects">
+              <!-- <li class="item">
+                <p id="project-1" class="text-small">Моё резюме - создание макета (Figma)</p>
+                <a
+                  href="https://www.figma.com/design/tIg0O0TskDivlzifTRJWrC/Resume?node-id=33-3&m=dev&t=jxvGN6VCn17YcarV-1"
+                  target="_blank"
+                  class="link text-small"
+                  >https://www.figma.com/design/...</a
+                >
               </li>
               <li class="item">
-                <p id="edu-2-position" class="text-big">Бухгалтер</p>
-                <div class="firm-town">
-                  <p id="edu-2-firm" class="text-medium">ДИИ - Индустриальный институт</p>
-                  <p id="edu-2-town" class="text-small">г.Каменское</p>
-                </div>
-                <p id="edu-2-period" class="text-small">Октябрь 1994 - Декабрь 1994</p>
+                <p id="project-2" class="text-small">
+                  Моё резюме на GitHub (HTML + CSS + JavaScript)
+                </p>
+                <a
+                  href="https://github.com/pitsyk-aleksandr/resume"
+                  target="_blank"
+                  class="link text-small"
+                  >https://github.com/.../resume</a
+                >
               </li> -->
             </ul>
           </section>
@@ -344,7 +384,22 @@
                         </svg>
                       </button> -->
           <section class="section works">
-            <h3 id="works-title" class="text-title-section">Опыт работы</h3>
+            <h3 id="works-title" class="text-title-section">Досвід роботи</h3>
+            <form class="subsection filter">
+              <p id="filter-title" class="text-small">Фільтр :</p>
+              <div class="inputs">
+                <div class="filter-input">
+                  <input type="radio" id="works-it" name="filter" value="it" checked />
+                  <label for="works-it" id="filter-it" class="text-small">Досвід в IT</label>
+                </div>
+
+                <div class="filter-input">
+                  <input type="radio" id="works-all" name="filter" value="all" />
+                  <label for="works-all" id="filter-all" class="text-small">Весь досвід</label>
+                </div>
+              </div>
+            </form>
+
             <ul class="list works">
               <!-- <li class="item">
                 <p id="work-1-position" class="text-big">
@@ -566,6 +621,29 @@
               </li> -->
             </ul>
           </section>
+
+          <!-- Секция ОБРАЗОВАНИЕ -->
+          <section class="section educations">
+            <h3 id="edu-title" class="text-title-section">Освіта</h3>
+            <ul class="list educations">
+              <!-- <li class="item education">
+                <p id="edu-1-position" class="text-big">Инженер-металлург</p>
+                <div class="firm-town">
+                  <p id="edu-1-firm" class="text-medium">ДИИ - Индустриальный институт</p>
+                  <p id="edu-1-town" class="text-small">г.Каменское</p>
+                </div>
+                <p id="edu-1-period" class="text-small">Сентябрь 1984 - Июнь 1991</p>
+              </li>
+              <li class="item">
+                <p id="edu-2-position" class="text-big">Бухгалтер</p>
+                <div class="firm-town">
+                  <p id="edu-2-firm" class="text-medium">ДИИ - Индустриальный институт</p>
+                  <p id="edu-2-town" class="text-small">г.Каменское</p>
+                </div>
+                <p id="edu-2-period" class="text-small">Октябрь 1994 - Декабрь 1994</p>
+              </li> -->
+            </ul>
+          </section>
         </div>
       </div>
     </main>
@@ -573,7 +651,7 @@
     <!-- Футер - подвал сайта -->
     <footer>
       <div class="page-footer">
-        <button type="button" class="print-btn"></button>
+        <button type="button" class="print-btn" title="Надрукувати резюме"></button>
       </div>
     </footer>
 
@@ -582,11 +660,20 @@
     <!-- Формированию динамического контента из lang-db.js + Работа по кнопкам меню - Переключение языков -->
     <script src="./js/make-html.js" type="module"></script>
 
+    <!-- Работа по кнопкам - Переключение языков  -->
+    <!-- <script src="./js/on-lang.js" type="module"></script> -->
+
+    <!-- Работа по фильтру - переключателям видов работ  -->
+    <!-- <script src="./js/on-filter.js" type="module"></script> -->
+
     <!-- Статический сайт = Работа по кнопкам меню - Переключение языков  -->
     <!-- <script src="./js/lang.js" type="module"></script> -->
 
     <!-- Работа по кнопке - Опыт работы - Подробности  -->
     <script src="./js/details.js" type="module"></script>
+
+    <!-- Работа по кнопке - Печать  -->
+    <script src="./js/on-print.js" type="module"></script>
 
     <!-- Установка верхнего отступа по высоте шапки для body -->
     <script>
@@ -595,7 +682,6 @@
         .getBoundingClientRect();
 
       document.body.style.paddingTop = `${pageHeaderHeight}px`;
-      // document.body.style.paddingBottom = `12px`;
     </script>
 
     <!-- Ссылка на печать и Скрипт печати страницы  -->

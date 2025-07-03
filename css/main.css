@@ -31,6 +31,13 @@
   font-size: 18px;
 }
 
+.text-title-subsection {
+  font-family: "Inter", sans-serif;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 16px;
+}
+
 .text-big {
   font-family: "Inter", sans-serif;
   font-style: normal;
@@ -120,7 +127,7 @@ footer, .main-content, header {
   border-style: solid;
   border-color: #0D0D0D;
   border-width: 1px;
-  background-color: #8FDCDE;
+  background-color: rgba(143, 220, 222, 0.7);
 }
 
 /* Стили для блока уровней - кружочков */
@@ -393,7 +400,7 @@ header {
   cursor: pointer;
   padding: 5px;
   color: #0D0D0D;
-  background-color: #8FDCDE;
+  background-color: rgba(143, 220, 222, 0.7);
   /* Текущий язык сайта*/
 }
 .lang-btn.current {
@@ -502,9 +509,9 @@ header {
   padding-left: 0px;
   border-radius: 12px;
   border-style: solid;
-  border-color: #8FDCDE;
+  border-color: rgba(143, 220, 222, 0.7);
   border-width: 1px;
-  background-color: #D2E1D8;
+  background-color: rgba(143, 220, 222, 0.15);
   /* Ширина блока */
   width: 100%;
   /* Блок делаем флексом */
@@ -553,8 +560,97 @@ header {
   }
 }
 
+/* ПодСекция = Заголовок + Список */
+.subsection {
+  padding-top: 8px;
+  padding-right: 0px;
+  padding-bottom: 8px;
+  padding-left: 0px;
+  border-radius: 12px;
+  border-style: solid;
+  border-color: rgba(143, 220, 222, 0.7);
+  border-width: 1px;
+  background-color: rgba(143, 220, 222, 0.3);
+  /* Ширина блока */
+  width: 100%;
+  /* Блок делаем флексом */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /* Установка всех элементов в столбец */
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  /* Расстояние между блоками */
+  gap: 8px;
+  /* Выравнивание контента - по расстоянию между ними*/
+  /* Выравнивание всех элементов контейнера по второстепенной оси - по центру */
+}
+.subsection.filter {
+  border-radius: 12px;
+  border-style: solid;
+  border-color: rgba(143, 220, 222, 0.7);
+  border-width: 1px;
+  background-color: rgba(143, 220, 222, 0.3);
+  /* Установка всех элементов в строку */
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  /* Расстояние между блоками */
+  gap: 12px;
+  /* Выравнивание контента - по расстоянию между ними*/
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  /* Выравнивание всех элементов контейнера по второстепенной оси - по центру */
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.subsection.filter .inputs {
+  padding-top: 4px;
+  padding-right: 12px;
+  padding-bottom: 4px;
+  padding-left: 12px;
+  border-radius: 8px;
+  background-color: rgba(143, 220, 222, 0.7);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /* Установка всех элементов в строку */
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  /* Расстояние между блоками */
+  gap: 28px;
+  /* Выравнивание всех элементов контейнера по второстепенной оси - по центру */
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.subsection.filter .inputs .filter-input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /* Установка всех элементов в строку */
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  /* Расстояние между блоками */
+  gap: 8px;
+  /* Выравнивание всех элементов контейнера по второстепенной оси - по центру */
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 /* Заголовок секции */
 .text-title-section,
+.text-title-subsection,
 .text-title-main {
   text-align: center;
 }
@@ -586,7 +682,7 @@ header {
   padding-right: 24px;
   padding-bottom: 4px;
   padding-left: 24px;
-  background-color: #8FDCDE;
+  background-color: rgba(143, 220, 222, 0.7);
   border: none;
   border-radius: 8px;
   /* Ширина блока */
@@ -724,7 +820,7 @@ header {
   border-style: solid;
   border-color: #0D0D0D;
   border-width: 1px;
-  background-color: #8FDCDE;
+  background-color: rgba(143, 220, 222, 0.7);
   -webkit-box-shadow: 1px 1px 1px 1px rgba(0, 0, 255, 0.2);
           box-shadow: 1px 1px 1px 1px rgba(0, 0, 255, 0.2);
   /* Вид курсора над кнопкой */
@@ -738,7 +834,7 @@ header {
   transition: transform 250ms linear, background-color 250ms linear, fill 250ms linear, -webkit-transform 250ms linear;
 }
 .btn-details:hover, .btn-details:focus {
-  background-color: #D2E1D8;
+  background-color: rgba(143, 220, 222, 0.15);
 }
 .btn-details.show {
   /* Цвет текста кнопки - Для текстового контента */
@@ -808,12 +904,18 @@ footer {
 @media screen and (min-width: 1200px) {
   .page-footer {
     display: block;
-    position: relative;
-    padding: 8px 12px 8px 12px;
     /* Ширина блока - 100% ширины container */
     width: 100%;
     /* Цвет фона*/
     background-color: #FEEFD6;
+    border-radius: 12px;
+    border-style: solid;
+    border-color: rgba(143, 220, 222, 0.7);
+    border-width: 1px;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-top: 8px;
+    padding-bottom: 8px;
   }
 }
 
@@ -823,9 +925,6 @@ footer {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  position: absolute;
-  bottom: 0;
-  right: 0;
   /* =========================================== */
   /* Блок стилей контент кнопки - фоновая иконка */
   width: 52px;
@@ -839,13 +938,13 @@ footer {
   border-style: solid;
   border-width: 1px;
   border-color: #0D0D0D;
-  background-color: #D2E1D8;
+  background-color: rgba(143, 220, 222, 0.15);
   fill: #0D0D0D;
   /* Вид курсора над кнопкой */
   cursor: pointer;
 }
 .print-btn:hover, .print-btn:focus {
-  background-color: #8FDCDE;
+  background-color: rgba(143, 220, 222, 0.7);
 }
 
 /* Стили при печати на принтере - для всех объектов */

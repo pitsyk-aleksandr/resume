@@ -10,29 +10,24 @@ import dbResponses from '../data/db-responses.js';
 import dbAchieves from '../data/db-achieves.js';
 
 /* Деструктуризация информации - в массивы структур данных */
-const { langs, contents, techskills, softskills, langskills, projects, additions, educations, works } = dbLang;
+const { langs, contents, subtechskills, techskills, softskills, langskills, projects, additions, educations, works } = dbLang;
 const { responses } = dbResponses;
 const { achieves } = dbAchieves;
 
 
-/* Установка текущего языка */
+/* Переменная - Установка текущего языка */
 let currentLang = 0;
+
+/* Переменная фильтрации работ */
+let filterWork = "it";
+
 
 /* Вызов функции изменения текстового контента в зависимости от текущего языка */
 changeLang(currentLang);
 
-/* ==================================================== */
-/* Поиск объекта - кнопка - Печать */
-const printBtn = document.querySelector('.print-btn');
 
-/* Добавляем "слушателя событий" на кнопку - Печать */
-printBtn.addEventListener('click', onPrintBtnClick);
 
-/* Функция - хендлер (при клике на кнопку Печать) */
-function onPrintBtnClick(event) { 
-    window.print();
-};
-/* ==================================================== */
+
 
 /* Поиск объекта - меню с кнопками выбора языков */
 const langMenu = document.querySelector('.lang-menu');
@@ -76,41 +71,8 @@ function onMenuLangClick(event) {
     currentLang = Number(nameLang);
     console.log('currentLang', currentLang);
 
-    /* Удаление элементов, которые будут переформированы динамически */
-    /* section - techskills = Секция ТЕХНИЧЕСКИЕ НАВЫКИ */  
-    const sectionTechskillsEl = document.querySelector('.section.tech-skills');
-    sectionTechskillsEl.remove();
-
-    const sectionSoftskillsEl = document.querySelector('.section.soft-skills');
-    sectionSoftskillsEl.remove();
-
-    const sectionLangskillsEl = document.querySelector('.section.lang-skills');
-    sectionLangskillsEl.remove();
-
-    const sectionProjectsEl = document.querySelector('.section.projects');
-    sectionProjectsEl.remove();
-
-    const sectionAdditionsEl = document.querySelector('.section.additions');
-    sectionAdditionsEl.remove();
-
-
-
-    /* Поиск всех элементов с образованиями в списке*/
-    const itemEduEls = document.querySelectorAll('.item.education');
-    /* Удаление всех элементов li class="item education" */
-    for (const element of itemEduEls) {
-        element.remove();
-    }    
-
-    /* Поиск всех элементов с работами в списке*/
-    const itemWorkEls = document.querySelectorAll('.item.work');
-    /* Удаление всех элементов li class="item work" */
-    for (const element of itemWorkEls) {
-        element.remove();
-    }
-
-
     
+   
     /* Вызов функции изменения текста в зависимости от текущего языка */
     changeLang(currentLang);
 
@@ -122,6 +84,58 @@ function onMenuLangClick(event) {
 // Функция изменения текстового контента на сайте - 3 вариант + динамический контент
 /* --------------------------------------------------------------------------- */
 function changeLang(newCurrentLang) {
+
+     /* Удаление элементов, которые будут переформированы динамически */
+
+    /* section - techskills = Секция ТЕХНИЧЕСКИЕ НАВЫКИ */  
+    const sectionTechskillsEl = document.querySelector('.section.tech-skills');
+    if (sectionTechskillsEl) {
+        sectionTechskillsEl.remove();
+    };
+
+    const sectionLangskillsEl = document.querySelector('.section.lang-skills');
+    if (sectionLangskillsEl) {
+        sectionLangskillsEl.remove();
+    };
+    
+    const sectionSoftskillsEl = document.querySelector('.section.soft-skills');
+    if (sectionSoftskillsEl) {
+        sectionSoftskillsEl.remove();
+    };
+    
+    const sectionAdditionsEl = document.querySelector('.section.additions');
+    if (sectionAdditionsEl) {
+        sectionAdditionsEl.remove();
+    };
+    
+    /* Поиск всех элементов с проектами в списке*/
+    const itemProjectsEls = document.querySelectorAll('.item.project');
+    if (itemProjectsEls) {
+        /* Удаление всех элементов li class="item project" */
+        for (const element of itemProjectsEls) {
+         element.remove();
+        };
+    };
+
+    /* Поиск всех элементов с работами в списке*/
+    const itemWorkEls = document.querySelectorAll('.item.work');
+    if (itemWorkEls) {
+        /* Удаление всех элементов li class="item work" */
+        for (const element of itemWorkEls) {
+        element.remove();
+        };
+    };
+
+    /* Поиск всех элементов с образованиями в списке*/
+    const itemEduEls = document.querySelectorAll('.item.education');
+    if (itemEduEls) {
+        /* Удаление всех элементов li class="item education" */
+        for (const element of itemEduEls) {
+            element.remove();
+        };
+    };
+
+        
 
     /* ================================================================================================ */
     /* Фильтрация массива структур по текущему языку (кроме techskills) - в отфильтрованные массивы */
@@ -157,11 +171,10 @@ function changeLang(newCurrentLang) {
     console.log('achievesLang', achievesLang);
 
     /* Деструктуризация основного контента в переменные из массива структуры текущего языка */
-    const { lang_id, headtitle, myposition, myname, photoalt, printtitle,
-        contactstitle, techtitle, softtitle, langtitle, projectstitle, addstitle,
-        introtitle, introtext, edutitle, workstitle, responsetitle, achievetitle } = contentsLang[0];
-
-
+    const { lang_id, headtitle, myposition, myname, photoalt, phototitle, printtitle,
+        contactstitle, techtitle, langtitle, softtitle, addstitle, introtitle, introtext, 
+        projectstitle, workstitle, filtertitle, filterit, filterall, responsetitle, achievetitle,
+        edutitle } = contentsLang[0];
 
     /* ============================================================================ */
     /* Изменяем - Атрибут <html lang=> */
@@ -220,18 +233,20 @@ function changeLang(newCurrentLang) {
     /* ============================================================================ */
 
     /* ============================================================================ */
-    /* Изменяем - Атрибут alt для фотографии */
+    /* Изменяем - Атрибуты alt и title для фотографии */
     /* ---------------------------------------------------------------------------- */
     /* Ищем элемент с тегом img - саму фотографию  */
     const photoEl = document.querySelector('.section .photo');
     /* Изменяем значения атрибутов в зависимости от языка */
     photoEl.setAttribute('alt', `${photoalt}`);
+    photoEl.setAttribute('title', `${phototitle}`);
     /* ============================================================================ */
+
 
     /* ============================================================================ */
     /* Изменяем - Атрибут  title для кнопки - Печать */
     /* ---------------------------------------------------------------------------- */
-    /* Ищем элемент с тегом img - саму фотографию  */
+    /* Ищем элемент - кнопку - Печать */
     const printBtnEl = document.querySelector('.print-btn');
     /* Изменяем значения атрибутов в зависимости от языка */
     printBtnEl.setAttribute('title', `${printtitle}`);
@@ -260,58 +275,62 @@ function changeLang(newCurrentLang) {
     /* Секция ТЕХНИЧЕСКИЕ НАВЫКИ */
     /* Простановка уровней навыков (skill) в зависимости от указанного в БД (или в структуре) */
 
+    /* Переменная для формирования левой стороны */
     let markUpSideLeft = ``;
-    
+
+    /* Переменная для формирования списков */ 
     let list = ``;
-    for (const techskill of techskillsLang) {
-        let item = `
-            <li class="item">
-                <p class="text-big">${techskill.name}</p>
-                <!-- Блок с уровнем знаний. Уровень навыка определяется дополнительным классом class="level-4" -->
-                <div class="levels level-${techskill.level}">
-                    <div class="level one"></div>
-                    <div class="level two"></div>
-                    <div class="level three"></div>
-                    <div class="level four"></div>
-                    <div class="level five"></div>
-                </div>
-            </li>
-        `;
-        list = list + item;
-    };
+    
+    /* Переменная для формирования типов технических навыков */ 
+    let markUpSubTech = '';
+
+    /* Цикл по типам технических навыков*/
+    for (const subtechskill of subtechskills) {
+        console.log(subtechskill);
+
+        /* Фильтрация навыков по типам */
+        let techskillsSub = techskills.filter(techskill => techskill.subtechskill_id === subtechskill.subtechskill_id);
+            console.log(techskillsSub);
+        for (const techskill of techskillsSub) {
+            console.log(techskill.name);
+            let item = `
+                <li class="item">
+                    <p class="text-big">${techskill.name}</p>
+                    <!-- Блок с уровнем знаний. Уровень навыка определяется дополнительным классом class="level-4" -->
+                    <div class="levels level-${techskill.level}">
+                        <div class="level one"></div>
+                        <div class="level two"></div>
+                        <div class="level three"></div>
+                        <div class="level four"></div>
+                        <div class="level five"></div>
+                    </div>
+                </li>
+            `;
+            list = list + item;
+        }
+
+        markUpSubTech = markUpSubTech +
+        `<!-- Под-Секция ТЕХНИЧЕСКИЕ НАВЫКИ -->
+        <div class="subsection">
+        <h4 class="text-title-subsection">${subtechskill.name}</h4>
+            <ul class="list">`
+                + list +
+            `</ul >
+        </div>`; 
+
+        /* Обнуляем значение Переменной для формирования списков */ 
+        list = ``;
+        
+    }
 
     markUpSideLeft = markUpSideLeft +
         `<!-- Секция ТЕХНИЧЕСКИЕ НАВЫКИ -->
         <section class="section tech-skills">
-            <h3 id="tech-title" class="text-title-section">${techtitle}</h3>
-            <ul class="list">`
-                + list +
-            `</ul >
-        </section>`;          
+            <h3 id="tech-title" class="text-title-section">${techtitle}</h3>`
+                + markUpSubTech +
+            `</section>`;          
 
-    /* section - softskills */
-    /* Секция ЛИЧНЫЕ КАЧЕСТВА */              
-
-    list = ``;
-    for (const softskill of softskillsLang) {
-        let item = `
-            <li class="item">
-                <p id="soft-1" class="text-big">${softskill.name}</p>
-            </li>
-        `;
-        list = list + item;
-    };
-
-    markUpSideLeft = markUpSideLeft +
-        `<!-- Секция ЛИЧНЫЕ КАЧЕСТВА -->
-        <section class="section soft-skills">
-            <h3 id="soft-title" class="text-title-section">${softtitle}</h3>
-            <ul class="list">`
-                + list +
-            `</ul >
-        </section>`;   
-
-    
+        
     /* section - langskills */
     /* Секция ЗНАНИЕ ЯЗЫКОВ */
 
@@ -342,35 +361,28 @@ function changeLang(newCurrentLang) {
             `</ul >
         </section>`;
 
-
-    /* section - projects */
-    /* Секция ПРОЕКТЫ */
     
+    /* section - softskills */
+    /* Секция ЛИЧНЫЕ КАЧЕСТВА */              
+
     list = ``;
-    for (const project of projectsLang) {
+    for (const softskill of softskillsLang) {
         let item = `
-        <!-- Ссылка на проект. Открывается в новом окне -->
-        <li class="item">
-          <p id="project-1" class="text-small">${project.name}</p>
-          <a
-            href="${project.link_url}"
-            target="_blank"
-            class="link text-small"
-            >${project.link_name}</a
-          >
-        </li>
+            <li class="item">
+                <p id="soft-1" class="text-big">${softskill.name}</p>
+            </li>
         `;
         list = list + item;
     };
 
     markUpSideLeft = markUpSideLeft +
-        `<!-- Секция ПРОЕКТЫ -->
-        <section class="section projects">
-            <h3 id="projects-title" class="text-title-section">${projectstitle}</h3>
+        `<!-- Секция ЛИЧНЫЕ КАЧЕСТВА -->
+        <section class="section soft-skills">
+            <h3 id="soft-title" class="text-title-section">${softtitle}</h3>
             <ul class="list">`
                 + list +
             `</ul >
-        </section>`;     
+        </section>`;   
 
 
     /* section - additions */
@@ -416,7 +428,64 @@ function changeLang(newCurrentLang) {
     introTextEl.textContent = introtext;
 
 
+    /* section - projects */
+    /* Секция ПРОЕКТЫ */
+
+    /* Изменяем - Название блока ПРОЕКТЫ */
+
+    const projectsTitleEl = document.querySelector('#projects-title');
+    projectsTitleEl.textContent = projectstitle;
+    /* ============================================================================ */
+        
+    /* Поиск блока со списком проектов */
+    const listProjectsEl = document.querySelector('.list.projects');
     
+    let listProjects = ``;  
+    
+    for (const project of projectsLang) {
+        let item = `
+        <!-- Ссылка на проект. Открывается в новом окне -->
+        <li class="item project">
+          <p id="project-1" class="text-small">${project.name}</p>
+          <a
+            href="${project.link_url}"
+            target="_blank"
+            class="link text-small"
+            >${project.link_name}</a
+          >
+        </li>
+        `;
+        listProjects = listProjects + item;
+    };
+
+  
+    /* Вставляем в DOM динамически сформированный список проектов*/
+    listProjectsEl.insertAdjacentHTML("beforeend", listProjects);
+
+
+    /* ============================================================================ */
+    /* section - works */
+    /* Секция ОПЫТ РАБОТЫ */
+    /* ---------------------------------------------------------------------------- */
+
+    /* Изменяем - Название блока ОПЫТ РАБОТЫ */
+    const worksTitleEl = document.querySelector('#works-title');
+    worksTitleEl.textContent = workstitle;
+    /* ============================================================================ */
+    /* Изменяем - Название элементов по фильтрации */
+    const filterTitleEl = document.querySelector('#filter-title');
+    filterTitleEl.textContent = filtertitle;
+    const filterItEl = document.querySelector('#filter-it');
+    filterItEl.textContent = filterit;
+    const filterAllEl = document.querySelector('#filter-all');
+    filterAllEl.textContent = filterall;
+    /* ============================================================================ */
+    
+    
+    /* Вызов функции - Формирование списка работ в зависимости от фильтра */
+    changeFilterWork(filterWork, worksLang, responsesLang, achievesLang, responsetitle, achievetitle);
+
+
     /* section - educations */
     /* ! Секция ОБРАЗОВАНИЕ  */
     /* Изменяем - Название блока ОБРАЗОВАНИЕ */
@@ -443,106 +512,130 @@ function changeLang(newCurrentLang) {
         listEducations = listEducations + item;
     };
 
-    /* Вставляем в DOM динамически сформированный список работ*/
+    /* Вставляем в DOM динамически сформированный список образований*/
     listEducationsEl.insertAdjacentHTML("beforeend", listEducations);
-
-
-
-
-
-    /* ============================================================================ */
-    /* section - works */
-    /* Секция ОПЫТ РАБОТЫ */
-    /* ---------------------------------------------------------------------------- */
-    /* Изменяем - Название блока ОПЫТ РАБОТЫ */
-
-    const worksTitleEl = document.querySelector('#works-title');
-    worksTitleEl.textContent = workstitle;
-    /* ============================================================================ */
-    
-    /* Поиск блока со списком работ */
-    const listWorksEl = document.querySelector('.list.works');
-
-    let listWorks = ``;    
-    for (const work of worksLang) {
-        let item = `
-            <li class="item work">
-                <p class="text-big">${work.position}</p>
-                <div class="firm-town">
-                    <p class="text-medium">${work.firm}</p>
-                    <p class="text-small">${work.town}</p>
-                </div>
-                <div class="period-btn">`;
-        
-        if (work.show_btn) {
-            item = item + `
-                    <button type="button" data-work="" class="btn-details text-btn"></button> `;
-        } else {
-            item = item + `
-                    <button type="button" hidden data-work="" class="btn-details text-btn"></button> `;
-        };
-        
-        item = item + `
-                    <p class="text-small">${work.period}</p>
-                </div>
-                <div class="details"> `;
-
-        /* ------------------------------------------------------------------------------------------------ */
-        /* Обязанности */
-        /* Фильтрация по работе (work_id или work_number) */
-        const responsesLangWork = responsesLang.filter(response => response.work_number === work.work_number);
-
-        /* Если есть отметка о показе обязанностей и есть сами обязанности в списке */
-        if (work.show_response && responsesLangWork.length>0 ) {
-            let itemList = ``;
-            
-            for (const response of responsesLangWork) {
-                itemList = itemList + `<li class="response-item text-small">${response.name}</li>`;
-            }
-            item = item + 
-                    `<div class="respons">
-                        <h4 class="response-title text-medium">${responsetitle}</h4>
-                         <ul class="list response">`
-                    + itemList +         
-                    `   </ul>
-                    </div> `;
-        };
-        /* ------------------------------------------------------------------------------------------------ */
-
-        /* ------------------------------------------------------------------------------------------------ */
-        /* Достижения */
-        /* Фильтрация по работе (work_id или work_number) */
-        const achievesLangWork = achievesLang.filter(achieve => achieve.work_number === work.work_number);
-        /* Если есть отметка о показе достижений и есть сами Достижения в списке */
-        if (work.show_achieve && achievesLangWork.length>0) {
-            let itemList = ``;
-            
-            for (const achieve of achievesLangWork) {
-                itemList = itemList + `<li class="achieve-item text-small">${achieve.name}</li>`;
-            }
-            item = item + 
-                    `<div class="achieve">
-                        <h4 class="achieve-title text-medium">${achievetitle}</h4>
-                         <ul class="list achieve">`
-                    + itemList +         
-                    `   </ul>
-                    </div> `;
-        };
-        /* ------------------------------------------------------------------------------------------------ */
-        
-        item = item +
-            `   </div>
-            </li > `;
-            
-            listWorks = listWorks + item;
-    };
-
-    /* Вставляем в DOM динамически сформированный список работ*/
-    listWorksEl.insertAdjacentHTML("beforeend", listWorks);
-
 
 
 };
 /* =========================================================================== */
 
 
+/* =========================================================================== */
+/* Функция формирования списка работ в зависимости от установленного фильтра и языка*/
+function changeFilterWork(newFilter, worksLang, responsesLang, achievesLang, responsetitle, achievetitle) {
+
+    let worksFilter = [];
+
+    if (newFilter==="it") {
+        worksFilter = worksLang.filter(work => work.work_it === true);
+    } else {
+        worksFilter = worksLang.filter(work => (work.work_it === true || work.work_it === false));
+    }
+
+    console.log('worksFilter', worksFilter);
+
+        /* Поиск блока со списком работ */
+        const listWorksEl = document.querySelector('.list.works');
+
+        let listWorks = ``;    
+        for (const work of worksFilter) {
+            let item = `
+                <li class="item work">
+                    <p class="text-big">${work.position}</p>
+                    <div class="firm-town">
+                        <p class="text-medium">${work.firm}</p>
+                        <p class="text-small">${work.town}</p>
+                    </div>
+                    <div class="period-btn">`;
+            
+            if (work.show_btn) {
+                item = item + `
+                        <button type="button" data-work="" class="btn-details text-btn"></button> `;
+            } else {
+                item = item + `
+                        <button type="button" hidden data-work="" class="btn-details text-btn"></button> `;
+            };
+            
+            item = item + `
+                        <p class="text-small">${work.period}</p>
+                    </div>
+                    <div class="details"> `;
+    
+            /* ------------------------------------------------------------------------------------------------ */
+            /* Обязанности */
+            /* Фильтрация по работе (work_id или work_number) */
+            const responsesLangWork = responsesLang.filter(response => response.work_number === work.work_number);
+    
+            /* Если есть отметка о показе обязанностей и есть сами обязанности в списке */
+            if (work.show_response && responsesLangWork.length>0 ) {
+                let itemList = ``;
+                
+                for (const response of responsesLangWork) {
+                    itemList = itemList + `<li class="response-item text-small">${response.name}</li>`;
+                }
+                item = item + 
+                        `<div class="respons">
+                            <h4 class="response-title text-medium">${responsetitle}</h4>
+                             <ul class="list response">`
+                        + itemList +         
+                        `   </ul>
+                        </div> `;
+            };
+            /* ------------------------------------------------------------------------------------------------ */
+    
+            /* ------------------------------------------------------------------------------------------------ */
+            /* Достижения */
+            /* Фильтрация по работе (work_id или work_number) */
+            const achievesLangWork = achievesLang.filter(achieve => achieve.work_number === work.work_number);
+            /* Если есть отметка о показе достижений и есть сами Достижения в списке */
+            if (work.show_achieve && achievesLangWork.length>0) {
+                let itemList = ``;
+                
+                for (const achieve of achievesLangWork) {
+                    itemList = itemList + `<li class="achieve-item text-small">${achieve.name}</li>`;
+                }
+                item = item + 
+                        `<div class="achieve">
+                            <h4 class="achieve-title text-medium">${achievetitle}</h4>
+                             <ul class="list achieve">`
+                        + itemList +         
+                        `   </ul>
+                        </div> `;
+            };
+            /* ------------------------------------------------------------------------------------------------ */
+            
+            item = item +
+                `   </div>
+                </li > `;
+                
+                listWorks = listWorks + item;
+        };
+    
+        /* Вставляем в DOM динамически сформированный список работ*/
+        listWorksEl.insertAdjacentHTML("beforeend", listWorks);
+    
+    
+
+}
+/* =========================================================================== */
+
+
+
+/* Работа по фильтру - переключателям видов работ */
+
+
+/* ==================================================== */
+/* Поиск объекта - фильтр по работам */
+const filterRadioBtn = document.querySelector('.inputs');
+
+/* Добавляем "слушателя событий" на переключатель  */
+filterRadioBtn.addEventListener('change', onfilterRadioBtnClick);
+
+/* Функция - изменение значения радиокнопки  */
+function onfilterRadioBtnClick(event) { 
+    console.log(event.target.value);
+    filterWork = event.target.value;
+    /* Вызов функции изменения текстового контента  */
+    changeLang(currentLang)
+};
+/* ==================================================== */

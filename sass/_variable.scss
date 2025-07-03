@@ -1,6 +1,7 @@
 /* Переменные */
 
 
+
 /* Переменные точек перелома адаптивной верстки*/
 $mobile: 480px;
 $tablet: 768px;
@@ -13,12 +14,14 @@ $desktop: 1200px;
 /*========================================*/ 
 /* ПЕРЕМЕННЫЕ - в виде SACC-переменных */ 
 $color-bg-main: #FEEFD6;
-$color-bg-section: #D2E1D8;
-$color-bg-part: #8FDCDE;
+$color-bg-section: rgb(143, 220, 222, 0.15);
+$color-bg-subsection:rgb(143,220,222,0.3);
+$color-bg-part: rgb(143, 220, 222, 0.7);
+$color-bg-details: rgb(143, 220, 222, 1);
 $color-black:#0D0D0D;
 $color-white:#FBFBFB;
 $color-accent: #24156E;
-$color-orange: #FBA85A;
+
 
 /*========================================*/
 /* ПЕРЕМЕННЫЕ - в виде CSS-переменных */

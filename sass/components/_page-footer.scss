@@ -17,16 +17,26 @@ footer {
     /* Установка для размера - больше планшета */
     @media screen and (min-width:$desktop) {
         display: block;
-        position: relative;
+        // position: relative;
         // Внутренние отступы 
         // сверху и снизу = 8px, справа и слева = 12px
-        padding: 8px 12px 8px 12px;
+        // padding: 8px 12px 8px 12px;
 
         /* Ширина блока - 100% ширины container */
         width: 100%;
 
         /* Цвет фона*/
         background-color: $color-bg-main;
+
+        border-radius: 12px;
+        border-style: solid;
+        border-color: $color-bg-part;
+        border-width: 1px;
+
+        padding-right: 20px;
+        padding-left: 20px;
+        padding-top: 8px;
+        padding-bottom: 8px;
     };
 };
 
@@ -36,10 +46,7 @@ footer {
             /* Кнопка - активна */
             display: inline-flex;
 
-            position: absolute;
-            bottom: 0;
-            right: 0;
-        
+       
             /* =========================================== */
             /* Блок стилей контент кнопки - фоновая иконка */
             width: 52px;
