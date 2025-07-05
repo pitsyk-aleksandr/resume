@@ -6,21 +6,18 @@ footer {
 
 .page-footer {
 
-    /* Для мобильной версии - кнопка не высвечивается*/
+    /* Для мобильной версии - футер не высвечивается*/
     display: none;
         
     @media print {
-        /* При печати - кнопка не высвечивается*/
+        /* При печати - футер не высвечивается*/
         display: none;
     };
         
     /* Установка для размера - больше планшета */
     @media screen and (min-width:$desktop) {
+        /* Футер - есть на экране */
         display: block;
-        // position: relative;
-        // Внутренние отступы 
-        // сверху и снизу = 8px, справа и слева = 12px
-        // padding: 8px 12px 8px 12px;
 
         /* Ширина блока - 100% ширины container */
         width: 100%;
@@ -45,8 +42,7 @@ footer {
 
             /* Кнопка - активна */
             display: inline-flex;
-
-       
+  
             /* =========================================== */
             /* Блок стилей контент кнопки - фоновая иконка */
             width: 52px;
@@ -56,10 +52,7 @@ footer {
             background-repeat: no-repeat;
             background-size: 24px 24px;
             background-position: center;
-        
             /* =========================================== */
-        
-        
         
             // Радиус скругления кнопки
             border-radius: 8px;
@@ -76,13 +69,11 @@ footer {
             /* Вид курсора над кнопкой */
             cursor: pointer;
         
-        
             // Изменения при наведении мыши или фокусе
             &:hover,
             &:focus {
                 // Цвет кнопки
                 background-color: $color-bg-part;
-        
             };
 
 }
