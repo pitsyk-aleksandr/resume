@@ -13,7 +13,7 @@ function onDetailsClick(event) {
     const isBtnDetails = event.target.classList.contains('btn-details');
 
     if (!isBtnDetails) {
-        console.log('Клик не на кнопке');
+        console.log('Клик не на кнопке Подробности');
         return;
     };
 

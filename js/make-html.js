@@ -47,7 +47,7 @@ filterRadioBtn.addEventListener('change', onfilterRadioBtnClick);
 /* =========================================================================== */
 
 /* =========================================================================== */
-/* Функция - хендлер (при клике на кнопку меню выборя азыков) */
+/* Функция - хендлер (при клике на кнопку меню выбора азыков) */
 /* --------------------------------------------------------------------------- */
 function onMenuLangClick(event) {
     
@@ -183,10 +183,10 @@ function changeLang(newCurrentLang) {
     console.log('achievesLang', achievesLang);
 
     /* Деструктуризация основного контента в переменные из массива структуры текущего языка */
-    const { lang_id, headtitle, myposition, myname, photoalt, phototitle, printtitle,
-        contactstitle, techtitle, langtitle, softtitle, addstitle, introtitle, introtext, 
-        projectstitle, workstitle, filtertitle, filterit, filterall, responsetitle, achievetitle,
-        edutitle } = contentsLang[0];
+    const { lang_id, headtitle, myposition, myname, photoalt, contactstitle, techtitle, langtitle,
+        softtitle, addstitle, introtitle, introtext, projectstitle, workstitle,
+        filtertitle, filterit, filterall, responsetitle, achievetitle, edutitle,
+        titlephoto, titleprint, titleemail, titletelegram, titlelinkedin,  titledetails} = contentsLang[0];
 
     /* ============================================================================ */
     /* Изменяем - Атрибут <html lang=> */
@@ -251,9 +251,44 @@ function changeLang(newCurrentLang) {
     const photoEl = document.querySelector('.section .photo');
     /* Изменяем значения атрибутов в зависимости от языка */
     photoEl.setAttribute('alt', `${photoalt}`);
-    photoEl.setAttribute('title', `${phototitle}`);
+    photoEl.setAttribute('title', `${titlephoto}`);
     /* ============================================================================ */
 
+    /* ============================================================================ */
+    /* Изменяем - Атрибут  title для ссылки - email */
+    /* ---------------------------------------------------------------------------- */
+    /* Ищем элемент - ссылку - email */
+    const emailLinkEl = document.querySelector('.link.email');
+    /* Изменяем значения атрибутов в зависимости от языка */
+    emailLinkEl.setAttribute('title', `${titleemail}`);
+    /* ============================================================================ */
+
+    /* ============================================================================ */
+    /* Изменяем - Атрибут  title для ссылки - telegram */
+    /* ---------------------------------------------------------------------------- */
+    /* Ищем элемент - ссылку - telegram */
+    const telegramLinkEl = document.querySelector('.link.telegram');
+    /* Изменяем значения атрибутов в зависимости от языка */
+    telegramLinkEl.setAttribute('title', `${titletelegram}`);
+    /* ============================================================================ */
+
+        /* ============================================================================ */
+    /* Изменяем - Атрибут  title для ссылки - linkedin */
+    /* ---------------------------------------------------------------------------- */
+    /* Ищем элемент - ссылку - linkedin */
+    const linkedinLinkEl = document.querySelector('.link.linkedin');
+    /* Изменяем значения атрибутов в зависимости от языка */
+    linkedinLinkEl.setAttribute('title', `${titlelinkedin}`);
+    /* ============================================================================ */
+
+    /* ============================================================================ */
+    /* Изменяем - Атрибут  title для кнопки - Детали */
+    /* ---------------------------------------------------------------------------- */
+    /* Ищем элемент - кнопку - Детали */
+    // const detailsBtnEl = document.querySelector('.btn-details');
+    /* Изменяем значения атрибутов в зависимости от языка */
+    // detailsBtnEl.setAttribute('title', `${titledetails}`);
+    /* ============================================================================ */
 
     /* ============================================================================ */
     /* Изменяем - Атрибут  title для кнопки - Печать */
@@ -261,7 +296,7 @@ function changeLang(newCurrentLang) {
     /* Ищем элемент - кнопку - Печать */
     const printBtnEl = document.querySelector('.print-btn');
     /* Изменяем значения атрибутов в зависимости от языка */
-    printBtnEl.setAttribute('title', `${printtitle}`);
+    printBtnEl.setAttribute('title', `${titleprint}`);
     /* ============================================================================ */
 
     /* ============================================================================ */
@@ -495,7 +530,7 @@ function changeLang(newCurrentLang) {
     
     
     /* Вызов функции - Формирование списка работ в зависимости от фильтра */
-    changeFilterWork(filterWork, worksLang, responsesLang, achievesLang, responsetitle, achievetitle);
+    changeFilterWork(filterWork, worksLang, responsesLang, achievesLang, responsetitle, achievetitle, titledetails);
 
 
     /* section - educations */
@@ -535,7 +570,7 @@ function changeLang(newCurrentLang) {
 /* =========================================================================== */
 /* Функция формирования списка работ в зависимости от установленного фильтра и языка*/
 /* --------------------------------------------------------------------------- */
-function changeFilterWork(newFilter, worksLang, responsesLang, achievesLang, responsetitle, achievetitle) {
+function changeFilterWork(newFilter, worksLang, responsesLang, achievesLang, responsetitle, achievetitle, titledetails ) {
 
     let worksFilter = [];
 
@@ -563,10 +598,10 @@ function changeFilterWork(newFilter, worksLang, responsesLang, achievesLang, res
             
             if (work.show_btn) {
                 item = item + `
-                        <button type="button" data-work="" class="btn-details text-btn"></button> `;
+                        <button type="button" data-work="" class="btn-details text-btn" title="${titledetails}"></button> `;
             } else {
                 item = item + `
-                        <button type="button" hidden data-work="" class="btn-details text-btn"></button> `;
+                        <button type="button" hidden data-work="" class="btn-details text-btn" title="${titledetails}"></button> `;
             };
             
             item = item + `
