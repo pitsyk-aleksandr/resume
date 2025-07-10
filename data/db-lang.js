@@ -653,7 +653,7 @@ export default {
             position: "Начальник відділу інформаційних технологій",
             firm: "ТОВ «ДніпроБал»",
             town: "м.Кам'янське",
-            period: "Січень 1998 - травень 1998",
+            period: "Січень 1998 - Травень 1998",
             work_it: true,
             show_btn: true,
             show_response: true,

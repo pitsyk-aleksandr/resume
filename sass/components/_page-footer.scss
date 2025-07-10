@@ -10,14 +10,24 @@ footer {
     display: none;
         
     @media print {
-        /* При печати - футер не высвечивается*/
-        display: none;
+
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 20px;
+        /* При печати - кнопки футера не высвечиваются*/
+        .btn-print {
+            display: none;
+        };
     };
         
     /* Установка для размера - больше планшета */
     @media screen and (min-width:$desktop) {
         /* Футер - есть на экране */
-        display: block;
+        display: flex;
+        align-items: center;
+        justify-content:space-between;
+        gap: 20px;
 
         /* Ширина блока - 100% ширины container */
         width: 100%;
@@ -35,23 +45,30 @@ footer {
         padding-top: 8px;
         padding-bottom: 8px;
     };
-};
 
-/* Кнопка - Печать */
-.print-btn {
-
-            /* Кнопка - активна */
+    & button {
+        /* Кнопка */
             display: inline-flex;
-  
-            /* =========================================== */
-            /* Блок стилей контент кнопки - фоновая иконка */
+        
+            align-items: center;
+            justify-content: center;
+        
+            
+            // padding-left: 12px;
+            // padding-right: 12px;
+            // padding-top: 8px;
+            // padding-bottom: 8px;
+
+            /* Размер кнопки */
             width: 52px;
             height: 40px;
         
-            background-image: url('../../icon/printer.svg');
-            background-repeat: no-repeat;
-            background-size: 24px 24px;
-            background-position: center;
+            /* =========================================== */
+            /* Блок стилей контент кнопки - фоновая иконка */
+            // background-image: url('../../icon/printer.svg');
+            // background-repeat: no-repeat;
+            // background-size: 24px 24px;
+            // background-position: center;
             /* =========================================== */
         
             // Радиус скругления кнопки
@@ -64,7 +81,7 @@ footer {
         
             // Цвет кнопки
             background-color: $color-bg-section;
-            fill: $color-black;
+            // fill: $color-black;
         
             /* Вид курсора над кнопкой */
             cursor: pointer;
@@ -75,5 +92,6 @@ footer {
                 // Цвет кнопки
                 background-color: $color-bg-part;
             };
+    };
+};
 
-}

@@ -294,9 +294,9 @@ function changeLang(newCurrentLang) {
     /* Изменяем - Атрибут  title для кнопки - Печать */
     /* ---------------------------------------------------------------------------- */
     /* Ищем элемент - кнопку - Печать */
-    const printBtnEl = document.querySelector('.print-btn');
+    const btnPrintEl = document.querySelector('.btn-print');
     /* Изменяем значения атрибутов в зависимости от языка */
-    printBtnEl.setAttribute('title', `${titleprint}`);
+    btnPrintEl.setAttribute('title', `${titleprint}`);
     /* ============================================================================ */
 
     /* ============================================================================ */

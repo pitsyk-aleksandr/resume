@@ -2,13 +2,13 @@
 
 /* ==================================================== */
 /* Поиск объекта - кнопка - Печать */
-const printBtn = document.querySelector('.print-btn');
+const btnPrint = document.querySelector('.btn-print');
 
 /* Добавляем "слушателя событий" на кнопку - Печать */
-printBtn.addEventListener('click', onPrintBtnClick);
+btnPrint.addEventListener('click', onBtnPrintClick);
 
 /* Функция - хендлер (при клике на кнопку Печать) */
-function onPrintBtnClick(event) { 
+function onBtnPrintClick(event) { 
     window.print();
 };
 /* ==================================================== */
