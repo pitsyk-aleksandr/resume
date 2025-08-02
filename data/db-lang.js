@@ -213,6 +213,12 @@ export default {
             name: "GitHub",
             level: 2,
         },
+        {
+            techskill_id: 12,
+            subtechskill_id: 2,
+            name: "Webpack",
+            level: 2,
+        },
     ],
         
     /* Личные качества */
